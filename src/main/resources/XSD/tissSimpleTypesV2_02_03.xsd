@@ -1,0 +1,3374 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by ans (EMBRACE) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ans="http://www.ans.gov.br/padroes/tiss/schemas" targetNamespace="http://www.ans.gov.br/padroes/tiss/schemas" elementFormDefault="qualified">
+	<!--VERS�O TISS 2.02.03-->
+	<!-- Schema com os tipos simples de dados re-utilizados na constru��o dos tipos complexos -->
+	<simpleType name="st_agencia">
+		<restriction base="string">
+			<maxLength value="10"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_atendimentoOdonto">
+		<restriction base="string">
+			<length value="1"/>
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<enumeration value="4"/>
+			<enumeration value="5"/>
+			<!--1-Tratamento Odontol�gico-->
+			<!--2-Exame Radiol�gico-->
+			<!--3-Ortodontia-->
+			<!--4-Urg�ncia / Emerg�ncia-->
+			<!--5-Auditoria-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_banco">
+		<restriction base="integer">
+			<totalDigits value="10"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_CBOS">
+		<restriction base="string">
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.05"/>
+			<enumeration value="1312.10"/>
+			<enumeration value="1312.10"/>
+			<enumeration value="1312.10"/>
+			<enumeration value="1312.10"/>
+			<enumeration value="1312.10"/>
+			<enumeration value="1311.20"/>
+			<enumeration value="2011"/>
+			<enumeration value="2011.15"/>
+			<enumeration value="2033.05"/>
+			<enumeration value="2030.10"/>
+			<enumeration value="2030.10"/>
+			<enumeration value="2030.10"/>
+			<enumeration value="2030.10"/>
+			<enumeration value="2033.10"/>
+			<enumeration value="2030.15"/>
+			<enumeration value="2030.20"/>
+			<enumeration value="2030.25"/>
+			<enumeration value="2131.50"/>
+			<enumeration value="2131.50"/>
+			<enumeration value="2211.05"/>
+			<enumeration value="2211.05"/>
+			<enumeration value="2231"/>
+			<enumeration value="2232"/>
+			<enumeration value="2231.01"/>
+			<enumeration value="2231.02"/>
+			<enumeration value="2231.02"/>
+			<enumeration value="2231.02"/>
+			<enumeration value="2231.03"/>
+			<enumeration value="2231.03"/>
+			<enumeration value="2231.04"/>
+			<enumeration value="2231.04"/>
+			<enumeration value="2235"/>
+			<enumeration value="2231.04"/>
+			<enumeration value="2231.04"/>
+			<enumeration value="2231.05"/>
+			<enumeration value="2232.04"/>
+			<enumeration value="2231.05"/>
+			<enumeration value="2236"/>
+			<enumeration value="2231.06"/>
+			<enumeration value="2231.06"/>
+			<enumeration value="2231.06"/>
+			<enumeration value="2237"/>
+			<enumeration value="2231.07"/>
+			<enumeration value="2238"/>
+			<enumeration value="2231.07"/>
+			<enumeration value="2233.05"/>
+			<enumeration value="2233.05"/>
+			<enumeration value="2233.05"/>
+			<enumeration value="2231.08"/>
+			<enumeration value="2234.05"/>
+			<enumeration value="2234.05"/>
+			<enumeration value="2234.05"/>
+			<enumeration value="2231.08"/>
+			<enumeration value="2232.08"/>
+			<enumeration value="2231.09"/>
+			<enumeration value="2231.09"/>
+			<enumeration value="2232.08"/>
+			<enumeration value="2235.05"/>
+			<enumeration value="2231.09"/>
+			<enumeration value="2232.08"/>
+			<enumeration value="2232.08"/>
+			<enumeration value="2231.10"/>
+			<enumeration value="2236.05"/>
+			<enumeration value="2236.05"/>
+			<enumeration value="2231.10"/>
+			<enumeration value="2231.10"/>
+			<enumeration value="2237.05"/>
+			<enumeration value="2237.05"/>
+			<enumeration value="2231.11"/>
+			<enumeration value="2231.11"/>
+			<enumeration value="2231.12"/>
+			<enumeration value="2231.12"/>
+			<enumeration value="2232.12"/>
+			<enumeration value="2231.13"/>
+			<enumeration value="2231.13"/>
+			<enumeration value="2232.12"/>
+			<enumeration value="2235.10"/>
+			<enumeration value="2231.14"/>
+			<enumeration value="2241.05"/>
+			<enumeration value="2231.15"/>
+			<enumeration value="2231.15"/>
+			<enumeration value="2231.15"/>
+			<enumeration value="2231.15"/>
+			<enumeration value="2231.15"/>
+			<enumeration value="2231.15"/>
+			<enumeration value="2231.16"/>
+			<enumeration value="2231.16"/>
+			<enumeration value="2231.16"/>
+			<enumeration value="2237.10"/>
+			<enumeration value="2237.10"/>
+			<enumeration value="2232.16"/>
+			<enumeration value="2231.17"/>
+			<enumeration value="2238.10"/>
+			<enumeration value="2231.17"/>
+			<enumeration value="2231.17"/>
+			<enumeration value="2231.18"/>
+			<enumeration value="2235.15"/>
+			<enumeration value="2231.19"/>
+			<enumeration value="2231.20"/>
+			<enumeration value="2231.20"/>
+			<enumeration value="2236.15"/>
+			<enumeration value="2232.20"/>
+			<enumeration value="2231.21"/>
+			<enumeration value="2231.21"/>
+			<enumeration value="2231.22"/>
+			<enumeration value="2231.22"/>
+			<enumeration value="2231.23"/>
+			<enumeration value="2231.23"/>
+			<enumeration value="2235.20"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2235.20"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2231.24"/>
+			<enumeration value="2232.24"/>
+			<enumeration value="2231.25"/>
+			<enumeration value="2231.25"/>
+			<enumeration value="2231.25"/>
+			<enumeration value="2231.25"/>
+			<enumeration value="2231.25"/>
+			<enumeration value="2236.20"/>
+			<enumeration value="2236.20"/>
+			<enumeration value="2231.26"/>
+			<enumeration value="2231.26"/>
+			<enumeration value="2231.27"/>
+			<enumeration value="2231.27"/>
+			<enumeration value="2231.28"/>
+			<enumeration value="2232.28"/>
+			<enumeration value="2232.28"/>
+			<enumeration value="2232.28"/>
+			<enumeration value="2235.25"/>
+			<enumeration value="2235.25"/>
+			<enumeration value="2231.29"/>
+			<enumeration value="2231.29"/>
+			<enumeration value="2231.29"/>
+			<enumeration value="2231.29"/>
+			<enumeration value="2231.30"/>
+			<enumeration value="2231.31"/>
+			<enumeration value="2231.31"/>
+			<enumeration value="2231.31"/>
+			<enumeration value="2231.31"/>
+			<enumeration value="2231.32"/>
+			<enumeration value="2231.32"/>
+			<enumeration value="2231.32"/>
+			<enumeration value="2231.32"/>
+			<enumeration value="2231.32"/>
+			<enumeration value="2231.32"/>
+			<enumeration value="2232.32"/>
+			<enumeration value="2231.33"/>
+			<enumeration value="2231.33"/>
+			<enumeration value="235.30"/>
+			<enumeration value="2231.34"/>
+			<enumeration value="2231.34"/>
+			<enumeration value="2231.34"/>
+			<enumeration value="2231.35"/>
+			<enumeration value="2231.36"/>
+			<enumeration value="2231.36"/>
+			<enumeration value="2231.36"/>
+			<enumeration value="2232.36"/>
+			<enumeration value="2232.36"/>
+			<enumeration value="2231.37"/>
+			<enumeration value="2232.36"/>
+			<enumeration value="2231.38"/>
+			<enumeration value="2231.38"/>
+			<enumeration value="2231.38"/>
+			<enumeration value="2231.38"/>
+			<enumeration value="2235.35"/>
+			<enumeration value="2231.39"/>
+			<enumeration value="2231.40"/>
+			<enumeration value="2231.40"/>
+			<enumeration value="2231.40"/>
+			<enumeration value="2231.40"/>
+			<enumeration value="2232.40"/>
+			<enumeration value="2232.40"/>
+			<enumeration value="2231.41"/>
+			<enumeration value="2231.41"/>
+			<enumeration value="2232.40"/>
+			<enumeration value="2232.40"/>
+			<enumeration value="2232.40"/>
+			<enumeration value="2231.42"/>
+			<enumeration value="2231.42"/>
+			<enumeration value="2231.42"/>
+			<enumeration value="2231.42"/>
+			<enumeration value="2231.43"/>
+			<enumeration value="2231.43"/>
+			<enumeration value="2231.43"/>
+			<enumeration value="2231.44"/>
+			<enumeration value="2235.40"/>
+			<enumeration value="2235.40"/>
+			<enumeration value="2231.44"/>
+			<enumeration value="2231.44"/>
+			<enumeration value="2232.44"/>
+			<enumeration value="2231.45"/>
+			<enumeration value="2231.45"/>
+			<enumeration value="2231.45"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.46"/>
+			<enumeration value="2231.47"/>
+			<enumeration value="2231.47"/>
+			<enumeration value="2231.47"/>
+			<enumeration value="2231.47"/>
+			<enumeration value="2231.48"/>
+			<enumeration value="2231.48"/>
+			<enumeration value="2231.48"/>
+			<enumeration value="2231.48"/>
+			<enumeration value="2232.48"/>
+			<enumeration value="2232.48"/>
+			<enumeration value="2235.45"/>
+			<enumeration value="2235.45"/>
+			<enumeration value="2231.49"/>
+			<enumeration value="2231.49"/>
+			<enumeration value="2231.49"/>
+			<enumeration value="2231.49"/>
+			<enumeration value="2232.48"/>
+			<enumeration value="2231.50"/>
+			<enumeration value="2231.51"/>
+			<enumeration value="2231.51"/>
+			<enumeration value="2231.51"/>
+			<enumeration value="2231.51"/>
+			<enumeration value="2231.51"/>
+			<enumeration value="2231.52"/>
+			<enumeration value="2231.52"/>
+			<enumeration value="2231.52"/>
+			<enumeration value="2232.52"/>
+			<enumeration value="2231.53"/>
+			<enumeration value="2231.53"/>
+			<enumeration value="2231.53"/>
+			<enumeration value="2231.53"/>
+			<enumeration value="2232.52"/>
+			<enumeration value="2231.53"/>
+			<enumeration value="2235.50"/>
+			<enumeration value="2231.54"/>
+			<enumeration value="2231.54"/>
+			<enumeration value="2231.55"/>
+			<enumeration value="2231.55"/>
+			<enumeration value="2231.56"/>
+			<enumeration value="2231.56"/>
+			<enumeration value="2231.56"/>
+			<enumeration value="2231.56"/>
+			<enumeration value="2231.56"/>
+			<enumeration value="2231.57"/>
+			<enumeration value="2232.56"/>
+			<enumeration value="2231.57"/>
+			<enumeration value="2231.57"/>
+			<enumeration value="2231.57"/>
+			<enumeration value="2232.56"/>
+			<enumeration value="2232.56"/>
+			<enumeration value="2231.57"/>
+			<enumeration value="2235.55"/>
+			<enumeration value="2232.60"/>
+			<enumeration value="2232.60"/>
+			<enumeration value="2235.60"/>
+			<enumeration value="2235.60"/>
+			<enumeration value="2232.64"/>
+			<enumeration value="2232.68"/>
+			<enumeration value="2232.68"/>
+			<enumeration value="2232.68"/>
+			<enumeration value="2232.72"/>
+			<enumeration value="2232.72"/>
+			<enumeration value="2232.72"/>
+			<enumeration value="2232.72"/>
+			<enumeration value="2232.72"/>
+			<enumeration value="2394.25"/>
+			<enumeration value="2515"/>
+			<enumeration value="2515.05"/>
+			<enumeration value="2515.05"/>
+			<enumeration value="2515.05"/>
+			<enumeration value="2516.05"/>
+			<enumeration value="2515.10"/>
+			<enumeration value="2515.10"/>
+			<enumeration value="2515.10"/>
+			<enumeration value="2515.10"/>
+			<enumeration value="2515.10"/>
+			<enumeration value="2521.05"/>
+			<enumeration value="2515.15"/>
+			<enumeration value="2515.15"/>
+			<enumeration value="2515.20"/>
+			<enumeration value="2515.25"/>
+			<enumeration value="2515.25"/>
+			<enumeration value="2515.25"/>
+			<enumeration value="2515.30"/>
+			<enumeration value="2515.35"/>
+			<enumeration value="2515.40"/>
+			<enumeration value="2515.40"/>
+			<enumeration value="2515.45"/>
+			<enumeration value="2515.50"/>
+			<enumeration value="3011.05"/>
+			<enumeration value="3135.05"/>
+			<enumeration value="3134.10"/>
+			<enumeration value="3225"/>
+			<enumeration value="3221.05"/>
+			<enumeration value="3221.05"/>
+			<enumeration value="3221.05"/>
+			<enumeration value="3221.05"/>
+			<enumeration value="3222.05"/>
+			<enumeration value="3222.05"/>
+			<enumeration value="3222.05"/>
+			<enumeration value="3223.05"/>
+			<enumeration value="3223.05"/>
+			<enumeration value="3223.05"/>
+			<enumeration value="3224.05"/>
+			<enumeration value="3225.05"/>
+			<enumeration value="3225.05"/>
+			<enumeration value="3226.05"/>
+			<enumeration value="3226.05"/>
+			<enumeration value="3222.10"/>
+			<enumeration value="3222.10"/>
+			<enumeration value="3222.10"/>
+			<enumeration value="3224.10"/>
+			<enumeration value="3221.15"/>
+			<enumeration value="3221.15"/>
+			<enumeration value="3221.15"/>
+			<enumeration value="3221.15"/>
+			<enumeration value="3221.15"/>
+			<enumeration value="3222.15"/>
+			<enumeration value="3222.15"/>
+			<enumeration value="3222.15"/>
+			<enumeration value="3224.15"/>
+			<enumeration value="3224.15"/>
+			<enumeration value="3224.15"/>
+			<enumeration value="3224.15"/>
+			<enumeration value="3224.15"/>
+			<enumeration value="3224.15"/>
+			<enumeration value="3222.20"/>
+			<enumeration value="3222.20"/>
+			<enumeration value="3224.20"/>
+			<enumeration value="3241.05"/>
+			<enumeration value="3222.25"/>
+			<enumeration value="3222.25"/>
+			<enumeration value="3222.25"/>
+			<enumeration value="3242.05"/>
+			<enumeration value="3242.05"/>
+			<enumeration value="3241.10"/>
+			<enumeration value="3251"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3222.30"/>
+			<enumeration value="3242.10"/>
+			<enumeration value="3242.10"/>
+			<enumeration value="3251.05"/>
+			<enumeration value="3241.15"/>
+			<enumeration value="3241.15"/>
+			<enumeration value="3241.15"/>
+			<enumeration value="3241.15"/>
+			<enumeration value="3241.15"/>
+			<enumeration value="3241.15"/>
+			<enumeration value="3241.15"/>
+			<enumeration value="3222.35"/>
+			<enumeration value="3222.35"/>
+			<enumeration value="3222.35"/>
+			<enumeration value="3251.10"/>
+			<enumeration value="3222.40"/>
+			<enumeration value="3222.40"/>
+			<enumeration value="3253.10"/>
+			<enumeration value="3251.15"/>
+			<enumeration value="3522"/>
+			<enumeration value="3522.10"/>
+			<enumeration value="3522.10"/>
+			<enumeration value="4110.10"/>
+			<enumeration value="4110.10"/>
+			<enumeration value="4110.10"/>
+			<enumeration value="4151.20"/>
+			<enumeration value="4221.05"/>
+			<enumeration value="4221.05"/>
+			<enumeration value="4221.10"/>
+			<enumeration value="4221.10"/>
+			<enumeration value="4221.10"/>
+			<enumeration value="4221.15"/>
+			<enumeration value="5151"/>
+			<enumeration value="5152"/>
+			<enumeration value="5132.20"/>
+			<enumeration value="5151.05"/>
+			<enumeration value="5151.05"/>
+			<enumeration value="5151.05"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5151.10"/>
+			<enumeration value="5152.10"/>
+			<enumeration value="5134.30"/>
+			<enumeration value="5151.15"/>
+			<enumeration value="5151.20"/>
+			<enumeration value="5151.20"/>
+			<enumeration value="5162.10"/>
+			<enumeration value="5168.05"/>
+			<enumeration value="5161.15"/>
+			<enumeration value="5161.35"/>
+			<enumeration value="5193.05"/>
+			<enumeration value="5193.05"/>
+			<enumeration value="5193.05"/>
+			<enumeration value="5211.30"/>
+			<enumeration value="6233.15"/>
+			<enumeration value="6233.15"/>
+			<enumeration value="7411.05"/>
+			<enumeration value="7664.20"/>
+			<enumeration value="7823.10"/>
+			<enumeration value="9151.05"/>
+			<enumeration value="9153.05"/>
+			<enumeration value="0000.00"/>
+			<enumeration value="2231-F3"/>
+			<enumeration value="3222-B3"/>
+			<enumeration value="2231-F4"/>
+			<enumeration value="2231-F5"/>
+			<enumeration value="2231-F6"/>
+			<enumeration value="2231-F7"/>
+			<enumeration value="2231-F8"/>
+			<!-- Diretor cl�nico  -->
+			<!-- Diretor de departamento de sa�de  -->
+			<!-- Diretor de divis�o m�dica  -->
+			<!-- Diretor de servi�os de sa�de  -->
+			<!-- Diretor de servi�os m�dicos  -->
+			<!-- Diretor de unidade assistencial  -->
+			<!-- Diretor de unidade de sa�de  -->
+			<!-- Diretor de unidade hospitalar  -->
+			<!-- Diretor m�dico-hospitalar  -->
+			<!-- Administrador de ambulat�rio  -->
+			<!-- Gerente de ambulat�rio  -->
+			<!-- Gerente de enfermagem  -->
+			<!-- Gerente de nutri��o em unidades de sa�de  -->
+			<!-- Gerente de servi�os de sa�de  -->
+			<!-- Gerente de servi�os sociais  -->
+			<!-- PROFISSIONAIS DA BIOTECNOLOGIA  -->
+			<!-- Geneticista  -->
+			<!-- Pesquisador de cl�nica m�dica  -->
+			<!-- Entomologista  -->
+			<!-- Entom�logo  -->
+			<!-- Ofiologista  -->
+			<!-- Ornit�logo  -->
+			<!-- Pesquisador de medicina b�sica  -->
+			<!-- Bacteriologista  -->
+			<!-- Fisiologista (exceto m�dico)  -->
+			<!-- Fenologista  -->
+			<!-- F�sico hospitalar  -->
+			<!-- F�sico m�dico  -->
+			<!-- Biologista  -->
+			<!-- Biom�dico  -->
+			<!-- M�DICOS  -->
+			<!-- CIRURGI�ES-DENTISTAS  -->
+			<!-- M�dico acupunturista  -->
+			<!-- M�dico alergista  -->
+			<!-- M�dico alergista e imunologista  -->
+			<!-- M�dico imunologista  -->
+			<!-- M�dico anatomopatologista  -->
+			<!-- Patologista  -->
+			<!-- Anestesiologista  -->
+			<!-- Anestesista  -->
+			<!-- ENFERMEIROS  -->
+			<!-- M�dico anestesiologista  -->
+			<!-- M�dico anestesista  -->
+			<!-- Angiologista  -->
+			<!-- Cirurgi�o dentista - auditor  -->
+			<!-- M�dico angiologista  -->
+			<!-- PROFISSIONAIS DA FISIOTERAPIA E AFINS  -->
+			<!-- Cardiologista  -->
+			<!-- M�dico cardiologista  -->
+			<!-- M�dico do cora��o  -->
+			<!-- NUTRICIONISTAS  -->
+			<!-- Cirurgi�o cardiovascular  -->
+			<!-- FONOAUDI�LOGOS  -->
+			<!-- M�dico cirurgi�o cardiovascular  -->
+			<!-- M�dico veterin�rio  -->
+			<!-- M�dico veterin�rio de sa�de p�blica  -->
+			<!-- M�dico veterin�rio sanitarista  -->
+			<!-- Cirurgi�o de cabe�a e pesco�o  -->
+			<!-- Farmac�utico  -->
+			<!-- Farmac�utico homeopata  -->
+			<!-- Farmac�utico hospitalar  -->
+			<!-- M�dico cirurgi�o de cabe�a e pesco�o  -->
+			<!-- Cirurgi�o dentista - cl�nico geral  -->
+			<!-- Cirurgi�o do aparelho digestivo  -->
+			<!-- Cirurgi�o gastroenterol�gico  -->
+			<!-- Dentista  -->
+			<!-- Enfermeiro  -->
+			<!-- M�dico cirurgi�o do aparelho digestivo  -->
+			<!-- Odontologista  -->
+			<!-- Odont�logo  -->
+			<!-- Cirurgi�o geral  -->
+			<!-- Fisioterapeuta  -->
+			<!-- Fisioterapeuta acupunturista  -->
+			<!-- M�dico cirurgi�o  -->
+			<!-- M�dico cirurgi�o geral  -->
+			<!-- Auxiliar de dietista  -->
+			<!-- Auxiliar de nutri��o e diet�tica  -->
+			<!-- Cirurgi�o pedi�trico  -->
+			<!-- M�dico cirurgi�o pedi�trico  -->
+			<!-- Cirurgi�o pl�stico  -->
+			<!-- M�dico cirurgi�o pl�stico  -->
+			<!-- Cirurgi�o dentista - endodontista  -->
+			<!-- Cirurgi�o tor�cico  -->
+			<!-- M�dico cirurgi�o tor�cico  -->
+			<!-- Odont�logo-endodontista  -->
+			<!-- Enfermeiro auditor  -->
+			<!-- M�dico citopatologista  -->
+			<!-- Avaliador f�sico  -->
+			<!-- Cl�nico geral  -->
+			<!-- M�dico cl�nico  -->
+			<!-- M�dico cl�nico geral  -->
+			<!-- M�dico especialista em cl�nica m�dica  -->
+			<!-- M�dico especialista em medicina interna  -->
+			<!-- M�dico internista  -->
+			<!-- M�dico comunit�rio  -->
+			<!-- M�dico de   -->
+			<!-- M�dico de sa�de da fam�lia  -->
+			<!-- Nutricionista  -->
+			<!-- Nutricionista (sa�de p�blica)  -->
+			<!-- Cirurgi�o dentista - epidemiologista  -->
+			<!-- Dermatologista  -->
+			<!-- Fonoaudi�logo  -->
+			<!-- Hansen�logo  -->
+			<!-- M�dico dermatologista  -->
+			<!-- M�dico do trabalho  -->
+			<!-- Enfermeiro de bordo  -->
+			<!-- M�dico em eletroencefalografia  -->
+			<!-- M�dico em endoscopia  -->
+			<!-- M�dico endoscopista  -->
+			<!-- Ortoptista  -->
+			<!-- Cirurgi�o dentista - estomatologista  -->
+			<!-- M�dico do tr�fego  -->
+			<!-- M�dico em medicina de tr�fego  -->
+			<!-- Intensivista  -->
+			<!-- M�dico em medicina intensiva  -->
+			<!-- M�dico em medicina nuclear  -->
+			<!-- M�dico nuclear  -->
+			<!-- Enfermeiro de centro cir�rgico  -->
+			<!-- Imagenologista  -->
+			<!-- Instrumentador cir�rgico (enfermeiro)  -->
+			<!-- M�dico angioradiologista  -->
+			<!-- M�dico densitometrista  -->
+			<!-- M�dico em diagn�stico por imagem  -->
+			<!-- M�dico em radiologia e diagn�stico por imagem  -->
+			<!-- M�dico neuroradiologista  -->
+			<!-- M�dico radiologista  -->
+			<!-- M�dico radiologista intervencionista  -->
+			<!-- Radiologista  -->
+			<!-- Ultra-sonografista  -->
+			<!-- Cirurgi�o dentista - implantodontista  -->
+			<!-- M�dico endocrinologista  -->
+			<!-- M�dico endocrinologista e metabologista  -->
+			<!-- M�dico metabolista  -->
+			<!-- Metabolista  -->
+			<!-- Metabologista  -->
+			<!-- Peripatologista  -->
+			<!-- Terapeuta ocupacional  -->
+			<!-- Fisiatra  -->
+			<!-- M�dico fisiatra  -->
+			<!-- Foniatra  -->
+			<!-- M�dico foniatra  -->
+			<!-- M�dico gastroenterologista  -->
+			<!-- Cirurgi�o dentista - odontogeriatra  -->
+			<!-- Dentista de idosos  -->
+			<!-- Dentista de terceira idade  -->
+			<!-- Enfermeiro de terapia intensiva  -->
+			<!-- Enfermeiro intensivista  -->
+			<!-- M�dico alopata  -->
+			<!-- M�dico em medicina interna  -->
+			<!-- M�dico generalista  -->
+			<!-- M�dico militar  -->
+			<!-- M�dico geneticista  -->
+			<!-- Geriatra  -->
+			<!-- Gerontologista  -->
+			<!-- Geront�logo  -->
+			<!-- M�dico geriatra  -->
+			<!-- Cirurgi�o ginecol�gico  -->
+			<!-- Ginecologista  -->
+			<!-- M�dico de mulheres  -->
+			<!-- M�dico ginecologista  -->
+			<!-- M�dico ginecologista e obstetra  -->
+			<!-- M�dico obstetra  -->
+			<!-- Cirurgi�o dentista - odontologista legal  -->
+			<!-- Hematologista  -->
+			<!-- M�dico hematologista  -->
+			<!-- Enfermeiro do trabalho  -->
+			<!-- Hemoterapeuta  -->
+			<!-- M�dico em hemoterapia  -->
+			<!-- M�dico hemoterapeuta  -->
+			<!-- M�dico homeopata  -->
+			<!-- Infectologista  -->
+			<!-- M�dico de doen�as infecciosas e parasit�rias  -->
+			<!-- M�dico infectologista  -->
+			<!-- Cirurgi�o dentista - odontopediatra  -->
+			<!-- Dentista de crian�a  -->
+			<!-- M�dico legista  -->
+			<!-- Odontopediatra  -->
+			<!-- Cirurgi�o de mama  -->
+			<!-- Cirurgi�o mastologista  -->
+			<!-- Mastologista  -->
+			<!-- M�dico mastologista  -->
+			<!-- Enfermeiro nefrologista  -->
+			<!-- M�dico nefrologista  -->
+			<!-- M�dico neurocirurgi�o  -->
+			<!-- M�dico neurocirurgi�o pedi�trico  -->
+			<!-- Neurocirurgi�o  -->
+			<!-- Neurocirurgi�o pedi�trico  -->
+			<!-- Cirurgi�o dentista - ortopedista e ortodontista  -->
+			<!-- Dentista de aparelho  -->
+			<!-- M�dico neurofisiologista  -->
+			<!-- Neurofisiologista  -->
+			<!-- Ortodontista  -->
+			<!-- Ortodont�logo  -->
+			<!-- Ortopedista maxilar  -->
+			<!-- M�dico neurologista  -->
+			<!-- M�dico neuropediatra  -->
+			<!-- Neurologista  -->
+			<!-- Neuropediatra  -->
+			<!-- M�dico nutrologista  -->
+			<!-- M�dico nutr�logo  -->
+			<!-- Nutrologista  -->
+			<!-- Cirurgi�o oftalmol�gico  -->
+			<!-- Enfermeiro de ber��rio  -->
+			<!-- Enfermeiro neonatologista  -->
+			<!-- M�dico oftalmologista  -->
+			<!-- Oftalmologista  -->
+			<!-- Cirurgi�o dentista - patologista bucal  -->
+			<!-- M�dico cancerologista  -->
+			<!-- M�dico oncologista  -->
+			<!-- Oncologista  -->
+			<!-- Cirurgi�o de m�o  -->
+			<!-- Cirurgi�o ortopedista  -->
+			<!-- Cirurgi�o traumatologista  -->
+			<!-- M�dico cirurgi�o de m�o  -->
+			<!-- M�dico de medicina esportiva  -->
+			<!-- M�dico ortopedista  -->
+			<!-- M�dico ortopedista e traumatologista  -->
+			<!-- M�dico traumatologista  -->
+			<!-- Ortopedista  -->
+			<!-- Traumatologista  -->
+			<!-- Cirurgi�o otorrinolaringologista  -->
+			<!-- M�dico otorrinolaringologista  -->
+			<!-- Otorrino  -->
+			<!-- Otorrinolaringologista  -->
+			<!-- M�dico laboratorista  -->
+			<!-- M�dico patologista  -->
+			<!-- M�dico patologista cl�nico  -->
+			<!-- Patologista cl�nico  -->
+			<!-- Cirurgi�o dentista - periodontista  -->
+			<!-- Dentista de gengivas  -->
+			<!-- Enfermeira parteira  -->
+			<!-- Enfermeiro obst�trico  -->
+			<!-- M�dico de crian�a  -->
+			<!-- M�dico pediatra  -->
+			<!-- Neonatologista  -->
+			<!-- Pediatra  -->
+			<!-- Periodontista  -->
+			<!-- M�dico perito  -->
+			<!-- M�dico pneumologista  -->
+			<!-- M�dico pneumotisiologista  -->
+			<!-- Pneumologista  -->
+			<!-- Pneumotisiologista  -->
+			<!-- Tisiologista  -->
+			<!-- Cirurgi�o proctologista  -->
+			<!-- M�dico proctologista  -->
+			<!-- Proctologista  -->
+			<!-- Cirurgi�o dentista - protesi�logo bucomaxilofacial  -->
+			<!-- M�dico psicanalista  -->
+			<!-- M�dico psicoterapeuta  -->
+			<!-- M�dico psiquiatra  -->
+			<!-- Neuropsiquiatra  -->
+			<!-- Protesista bucomaxilofacial  -->
+			<!-- Psiquiatra  -->
+			<!-- Enfermeiro psiqui�trico  -->
+			<!-- M�dico em radioterapia  -->
+			<!-- M�dico radioterapeuta  -->
+			<!-- M�dico reumatologista  -->
+			<!-- Reumatologista  -->
+			<!-- Epidemiologista  -->
+			<!-- M�dico de sa�de p�blica  -->
+			<!-- M�dico epidemiologista  -->
+			<!-- M�dico higienista  -->
+			<!-- M�dico sanitarista  -->
+			<!-- Andrologista  -->
+			<!-- Cirurgi�o dentista - protesista  -->
+			<!-- Cirurgi�o urol�gico  -->
+			<!-- Cirurgi�o urologista  -->
+			<!-- M�dico urologista  -->
+			<!-- Odont�logo protesista  -->
+			<!-- Protesista  -->
+			<!-- Urologista  -->
+			<!-- Enfermeiro puericultor e pedi�trico  -->
+			<!-- Cirurgi�o dentista - radiologista  -->
+			<!-- Odontoradiologista  -->
+			<!-- Enfermeiro de sa�de publica  -->
+			<!-- Enfermeiro sanitarista  -->
+			<!-- Cirurgi�o dentista - reabilitador oral  -->
+			<!-- Cirurgi�o dentista - traumatologista bucomaxilofacial  -->
+			<!-- Cirurgi�o oral e maxilofacial  -->
+			<!-- Odont�logo (cirurgia e traumatologia bucomaxilofacial)  -->
+			<!-- Cirurgi�o dentista de sa�de coletiva  -->
+			<!-- Dentista de s�ude coletiva  -->
+			<!-- Odontologista social  -->
+			<!-- Odont�logo de sa�de coletiva  -->
+			<!-- Odont�logo de sa�de p�blica  -->
+			<!-- Psicopedagogo  -->
+			<!-- PSIC�LOGOS E PSICANALISTAS  -->
+			<!-- Psic�logo da educa��o  -->
+			<!-- Psic�logo educacional  -->
+			<!-- Psic�logo escolar  -->
+			<!-- Assistente social  -->
+			<!-- Psic�logo acupunturista  -->
+			<!-- Psic�logo cl�nico  -->
+			<!-- Psic�logo da sa�de  -->
+			<!-- Psicoterapeuta  -->
+			<!-- Terapeuta  -->
+			<!-- Administrador  -->
+			<!-- Psic�logo desportivo  -->
+			<!-- Psic�logo do esporte  -->
+			<!-- Psic�logo hospitalar  -->
+			<!-- Psic�logo criminal  -->
+			<!-- Psic�logo forense  -->
+			<!-- Psic�logo jur�dico  -->
+			<!-- Psic�logo social  -->
+			<!-- Psic�logo do tr�nsito  -->
+			<!-- Psic�logo do trabalho  -->
+			<!-- Psic�logo organizacional  -->
+			<!-- Neuropsic�logo  -->
+			<!-- Psicanalista  -->
+			<!-- Laboratorista - exclusive an�lises cl�nicas  -->
+			<!-- T�cnico em laborat�rio �ptico  -->
+			<!-- T�cnico em instrumenta��o  -->
+			<!-- T�CNICOS EM PR�TESES ORTOP�DICAS  -->
+			<!-- Acupunturista  -->
+			<!-- Fitoterapeuta  -->
+			<!-- Terapeuta naturalista  -->
+			<!-- Terapeuta oriental  -->
+			<!-- T�cnico de enfermagem  -->
+			<!-- T�cnico de enfermagem socorrista  -->
+			<!-- T�cnico em hemotransfus�o  -->
+			<!-- �ptico oft�lmico  -->
+			<!-- optico optometrista  -->
+			<!-- optico protesista  -->
+			<!-- T�cnico em higiene dental  -->
+			<!-- Protesista (t�cnico)  -->
+			<!-- T�cnico ortop�dico  -->
+			<!-- T�cnico em imobiliza��es do aparelho locomotor  -->
+			<!-- T�cnico em imobiliza��es gessadas  -->
+			<!-- T�cnico de enfermagem de terapia intensiva  -->
+			<!-- T�cnico em hemodi�lise  -->
+			<!-- T�cnico em UTI  -->
+			<!-- Prot�tico dent�rio  -->
+			<!-- Homeopata (exceto m�dico)  -->
+			<!-- Terapeuta cr�neo-sacral  -->
+			<!-- Terapeuta hol�stico  -->
+			<!-- Terapeuta manual  -->
+			<!-- Terapeuta mio-facial  -->
+			<!-- T�cnico de enfermagem do trabalho  -->
+			<!-- T�cnico de enfermagem em sa�de ocupacional  -->
+			<!-- T�cnico de enfermagem ocupacional  -->
+			<!-- Atendente de cl�nica dent�ria  -->
+			<!-- Atendente de Consult�rio Dent�rio  -->
+			<!-- Atendente de gabinete dent�rio  -->
+			<!-- Atendente de servi�o odont�logico  -->
+			<!-- Atendente odontol�gico  -->
+			<!-- Auxiliar de dentista  -->
+			<!-- T�cnico de enfermagem em sa�de mental  -->
+			<!-- T�cnico de enfermagem psiqui�trica  -->
+			<!-- Auxiliar de Pr�tese Dent�ria  -->
+			<!-- Operador de eletroencefal�grafo  -->
+			<!-- Instrumentador cir�rgico  -->
+			<!-- Instrumentador em cirurgia  -->
+			<!-- Instrumentadora cir�rgica  -->
+			<!-- T�cnico de laborat�rio de an�lises cl�nicas  -->
+			<!-- T�cnico em patologia cl�nica  -->
+			<!-- Operador de eletrocardi�grafo  -->
+			<!-- T�CNICO EM FARM�CIA E EM MANIPULA��O FARMAC�UTICA  -->
+			<!-- Auxiliar de enfermagem  -->
+			<!-- Auxiliar de enfermagem de central de material esterelizado (CME)  -->
+			<!-- Auxiliar de enfermagem de centro cir�rgico  -->
+			<!-- Auxiliar de enfermagem de cl�nica m�dica  -->
+			<!-- Auxiliar de enfermagem de hospital  -->
+			<!-- Auxiliar de enfermagem de sa�de p�blica  -->
+			<!-- Auxiliar de enfermagem em hemodi�lise  -->
+			<!-- Auxiliar de enfermagem em home care  -->
+			<!-- Auxiliar de enfermagem em nefrologia  -->
+			<!-- Auxiliar de enfermagem em sa�de mental  -->
+			<!-- Auxiliar de enfermagem socorrista  -->
+			<!-- Auxiliar de ginecologia  -->
+			<!-- Auxiliar de hipodermia  -->
+			<!-- Auxiliar de obstetr�cia  -->
+			<!-- Auxiliar de oftalmologia  -->
+			<!-- Auxiliar em hemotransfus�o  -->
+			<!-- Auxiliar t�cnico de laborat�rio de an�lises cl�nicas  -->
+			<!-- Auxiliar t�cnico em patologia cl�nica  -->
+			<!-- Auxiliar t�cnico em laborat�rio de farm�cia  -->
+			<!-- T�cnico em hemodin�mica  -->
+			<!-- T�cnico em mamografia  -->
+			<!-- T�cnico em radiologia  -->
+			<!-- T�cnico em radiologia e imagenologia  -->
+			<!-- T�cnico em radiologia m�dica  -->
+			<!-- T�cnico em radiologia odontol�gica  -->
+			<!-- T�cnico em tomografia  -->
+			<!-- Auxiliar de enfermagem do trabalho  -->
+			<!-- Auxiliar de enfermagem em sa�de ocupacional  -->
+			<!-- Auxiliar de enfermagem ocupacional  -->
+			<!-- T�cnico em laborat�rio de farm�cia  -->
+			<!-- Auxiliar de sa�de (navega��o mar�tima)  -->
+			<!-- Auxiliar de sa�de mar�timo  -->
+			<!-- T�cnico em imunobiol�gicos  -->
+			<!-- T�cnico em Farm�cia  -->
+			<!-- AGENTES DA SA�DE E DO MEIO AMBIENTE  -->
+			<!-- Agente de saneamento  -->
+			<!-- Agente de sa�de p�blica  -->
+			<!-- Assistente administrativo  -->
+			<!-- Assistente t�cnico - no servi�o p�blico  -->
+			<!-- Assistente t�cnico administrativo  -->
+			<!-- Fitotec�rio  -->
+			<!-- Atendente de cl�nica veterin�ria  -->
+			<!-- Atendente de consult�rio veterin�rio  -->
+			<!-- Atendente de ambulat�rio  -->
+			<!-- Atendente de cl�nica m�dica  -->
+			<!-- Atendente de consult�rio m�dico  -->
+			<!-- Atendente de seguro sa�de  -->
+			<!-- AGENTES COMUNIT�RIOS DE SA�DE E AFINS  -->
+			<!-- AUXILIARES DE LABORAT�RIO DA SA�DE  -->
+			<!-- Cozinheiro de hospital  -->
+			<!-- Agente de sa�de  -->
+			<!-- Visitador de sa�de  -->
+			<!-- Visitador de sa�de em domic�lio  -->
+			<!-- Atendente de ber��rio  -->
+			<!-- Atendente de centro cir�rgico  -->
+			<!-- Atendente de enfermagem  -->
+			<!-- Atendente de enfermagem no servi�o dom�stico  -->
+			<!-- Atendente de hospital  -->
+			<!-- Atendente de servi�o de sa�de  -->
+			<!-- Atendente de servi�o m�dico  -->
+			<!-- Atendente hospitalar  -->
+			<!-- Atendente-enfermeiro  -->
+			<!-- Auxiliar de farm�cia de manipula��o  -->
+			<!-- Copeiro de hospital   -->
+			<!-- Assistente de parto  -->
+			<!-- Auxiliar de sanitarista  -->
+			<!-- Imunizador  -->
+			<!-- Acompanhante de idosos  -->
+			<!-- Radioestesista  -->
+			<!-- Auxiliar de est�tica  -->
+			<!-- Massoterapeuta  -->
+			<!-- Auxiliar de enfermagem veterin�ria  -->
+			<!-- Auxiliar de veterin�rio  -->
+			<!-- Enfermeiro veterin�rio  -->
+			<!-- Atendente de farm�cia - balconista  -->
+			<!-- Auxiliar de incuba��o  -->
+			<!-- Operador de incubadora  -->
+			<!-- Instrumentista de precis�o  -->
+			<!-- Auxiliar de radiologia (revela��o fotogr�fica)  -->
+			<!-- Motorista de ambul�ncia  -->
+			<!-- Instrumentista de laborat�rio (manuten��o)  -->
+			<!-- T�cnico em manuten��o de equipamentos e instrumentos m�dicohospitalares -->
+			<!-- N�o informado  -->
+			<!-- 2231-F3 M�dico Cirurgi�o Vascular -->
+			<!-- 3222-B3 Socorrista habilitado -->
+			<!-- 2231-F4 M�dico Cancerologista Pedi�trico -->
+			<!-- 2231-F5 M�dico Cancerologista Cirurgico -->
+			<!-- 2231-F6 M�dico Cancerologista Cl�nico-->
+			<!-- 2231-F7 M�dico em Medicina de Fam�lia e comunidade -->
+			<!-- 2231-F8 M�dico em Medicina Preventiva e Social -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_CEP">
+		<restriction base="string">
+			<maxLength value="8"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_CNES">
+		<restriction base="string">
+			<maxLength value="7"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_CNPJ">
+		<restriction base="string">
+			<pattern value="[0-9]{14}"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_CPF">
+		<restriction base="string">
+			<pattern value="[0-9]{11}"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_codigoBeneficiario">
+		<restriction base="string">
+			<maxLength value="20"/>
+			<minLength value="17"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_codigoDiagnostico">
+		<restriction base="string">
+			<maxLength value="5"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_codigoMunicipioIBGE">
+		<restriction base="string">
+			<length value="7"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_codigoPrestadorNaOperadora">
+		<restriction base="string">
+			<maxLength value="20"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_codigoTabela">
+		<restriction base="string">
+			<maxLength value="10"/>
+			<minLength value="8"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_condicaoClinica">
+		<restriction base="string">
+			<maxLength value="1"/>
+			<enumeration value="H"/>
+			<enumeration value="E"/>
+			<enumeration value="A"/>
+			<enumeration value="C"/>
+			<enumeration value="R"/>
+			<!--H - H�gido-->
+			<!--E - Extra��o indicada-->
+			<!--A - Ausente-->
+			<!--C - Cariado-->
+			<!--R - Restaurado-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_conta">
+		<restriction base="string">
+			<maxLength value="20"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_conselhoProfissional">
+		<restriction base="string">
+			<enumeration value="CRAS"/>
+			<enumeration value="COREN"/>
+			<enumeration value="CRF"/>
+			<enumeration value="CREFITO"/>
+			<enumeration value="CRM"/>
+			<enumeration value="CRN"/>
+			<enumeration value="CRO"/>
+			<enumeration value="CRP"/>
+			<enumeration value="OUT"/>
+			<enumeration value="CRFA"/>
+			<!--CAS - Conselho Regional de Assist�ncia Social-->
+			<!--COREN - Conselho Regional de Enfermagem-->
+			<!--CRF - Conselho Regional de Farm�cia-->
+			<!--CREFITO - Conselho Regional de Fisioterapia e Terapia Ocupacional-->
+			<!--CRM - Conselho Regional de Medicina-->
+			<!--CRN - Conselho Regional de Nutri��o-->
+			<!--CRO - Conselho Regional de Odontologia-->
+			<!--CRP - Conselho Regional de Psicologia-->
+			<!--OUT - Outros Conselhos-->
+			<!--CRFA - Conselho Regional de Fonoaudiologia-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_data">
+		<restriction base="date"/>
+	</simpleType>
+	<simpleType name="st_dataHora">
+		<restriction base="dateTime"/>
+	</simpleType>
+	<simpleType name="st_dente">
+		<restriction base="string">
+			<maxLength value="2"/>
+			<enumeration value="11"/>
+			<enumeration value="12"/>
+			<enumeration value="13"/>
+			<enumeration value="14"/>
+			<enumeration value="15"/>
+			<enumeration value="16"/>
+			<enumeration value="17"/>
+			<enumeration value="18"/>
+			<enumeration value="19"/>
+			<enumeration value="21"/>
+			<enumeration value="22"/>
+			<enumeration value="23"/>
+			<enumeration value="24"/>
+			<enumeration value="25"/>
+			<enumeration value="26"/>
+			<enumeration value="27"/>
+			<enumeration value="28"/>
+			<enumeration value="29"/>
+			<enumeration value="31"/>
+			<enumeration value="32"/>
+			<enumeration value="33"/>
+			<enumeration value="34"/>
+			<enumeration value="35"/>
+			<enumeration value="36"/>
+			<enumeration value="37"/>
+			<enumeration value="38"/>
+			<enumeration value="39"/>
+			<enumeration value="41"/>
+			<enumeration value="42"/>
+			<enumeration value="43"/>
+			<enumeration value="44"/>
+			<enumeration value="45"/>
+			<enumeration value="46"/>
+			<enumeration value="47"/>
+			<enumeration value="48"/>
+			<enumeration value="49"/>
+			<enumeration value="51"/>
+			<enumeration value="52"/>
+			<enumeration value="53"/>
+			<enumeration value="54"/>
+			<enumeration value="55"/>
+			<enumeration value="59"/>
+			<enumeration value="61"/>
+			<enumeration value="62"/>
+			<enumeration value="63"/>
+			<enumeration value="64"/>
+			<enumeration value="65"/>
+			<enumeration value="69"/>
+			<enumeration value="71"/>
+			<enumeration value="72"/>
+			<enumeration value="73"/>
+			<enumeration value="74"/>
+			<enumeration value="75"/>
+			<enumeration value="79"/>
+			<enumeration value="81"/>
+			<enumeration value="82"/>
+			<enumeration value="83"/>
+			<enumeration value="84"/>
+			<enumeration value="85"/>
+			<enumeration value="89"/>
+			<!--Incisivo Central Superior Direito-->
+			<!--Incisivo Lateral Superior Direito-->
+			<!--Canino Superior Direito-->
+			<!--Primeiro Pr�-molar Superior Direito-->
+			<!--Segundo Pr�-molar Superior Direito-->
+			<!--Primeiro Molar Superior Direito-->
+			<!--Segundo Molar Superior Direito-->
+			<!--Terceiro Molar Superior Direito-->
+			<!-- Dente Permanente Supranumer�rio em Hemi-arco Superior Direito -->
+			<!--Incisivo Central Superior Esquerdo-->
+			<!--Incisivo Lateral Superior Esquerdo-->
+			<!--Canino Superior Esquerdo-->
+			<!--Primeiro Pr�-molar Superior Esquerdo-->
+			<!--Segundo Pr�-molar Superior Esquerdo-->
+			<!--Primeiro Molar Superior Esquerdo-->
+			<!--Segundo Molar Superior Esquerdo-->
+			<!--Terceiro Molar Superior Esquerdo-->
+			<!--Dente Permanente Supranumer�rio em Hemi-arco Superior Esquerdo-->
+			<!--Incisivo Central Inferior Esquerdo-->
+			<!--Incisivo Lateral Inferior Esquerdo-->
+			<!--Canino Inferior Esquerdo-->
+			<!--Primeiro Pr�-molar Inferior Esquerdo-->
+			<!--Segundo Pr�-molar Inferior Esquerdo-->
+			<!--Primeiro Molar Inferior Esquerdo-->
+			<!--Segundo Molar Inferior Esquerdo-->
+			<!--Terceiro Molar Inferior Esquerdo-->
+			<!--Dente Permanente Supranumer�rio em Hemi-arco Inferior Esquerdo-->
+			<!--Incisivo Central Inferior Direito-->
+			<!--Incisivo Lateral Inferior Direito-->
+			<!--Canino Inferior Direito-->
+			<!--Primeiro Pr�-molar Inferior Direito-->
+			<!--Segundo Pr�-molar Inferior Direito-->
+			<!--Primeiro Molar Inferior Direito-->
+			<!--Segundo Molar Inferior Direito-->
+			<!--Terceiro Molar Inferior Direito-->
+			<!--Dente Permanente Supranumer�rio em Hemi-arco Inferior Direito-->
+			<!--Incisivo Central Dec�duo Superior Direito-->
+			<!--Incisivo Lateral Dec�duo Superior Direito-->
+			<!--Canino Dec�duo Superior Direito-->
+			<!--Primeiro Molar Dec�duo Superior Direito-->
+			<!--Segundo Molar Dec�duo Superior Direito-->
+			<!--Dente Dec�duo Supranumer�rio em Hemi-arco Superior Direito-->
+			<!--Incisivo Central Dec�duo Superior Esquerdo-->
+			<!--Incisivo Lateral Dec�duo Superior Esquerdo-->
+			<!--Canino Dec�duo Superior Esquerdo-->
+			<!--Primeiro Molar Dec�duo Superior Esquerdo-->
+			<!--Segundo Molar Dec�duo Superior Esquerdo-->
+			<!--Dente Dec�duo Supranumer�rio em Hemi-arco Superior Esquerdo-->
+			<!--Incisivo Central Dec�duo Inferior Esquerdo-->
+			<!--Incisivo Lateral Dec�duo Inferior Esquerdo-->
+			<!--Canino Dec�duo Inferior Esquerdo-->
+			<!--Primeiro Molar Dec�duo Inferior Esquerdo-->
+			<!--Segundo Molar Dec�duo Inferior Esquerdo-->
+			<!--Dente Dec�duo Supranumer�rio em Hemi-arco Inferior Esquerdo-->
+			<!--Incisivo Central Dec�duo Inferior Direito-->
+			<!--Incisivo Lateral Dec�duo Inferior Direito-->
+			<!--Canino Dec�duo Inferior Direito-->
+			<!--Primeiro Molar Dec�duo Inferior Direito-->
+			<!--Segundo molar Dec�duo Inferior Direito-->
+			<!--Dente Dec�duo Supranumer�rio em Hemi-arco Inferior Direito-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_descricao12">
+		<restriction base="string">
+			<maxLength value="12"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_descricao15">
+		<restriction base="string">
+			<maxLength value="15"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_descricao20">
+		<restriction base="string">
+			<maxLength value="20"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_descricao40">
+		<restriction base="string">
+			<maxLength value="40"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_descricaoGlosa">
+		<restriction base="string">
+			<maxLength value="500"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_descricaoTabela">
+		<restriction base="string">
+			<maxLength value="60"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_diariasUTI">
+		<restriction base="integer">
+			<totalDigits value="3"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_eletivaEmergencia">
+		<restriction base="string">
+			<enumeration value="E"/>
+			<enumeration value="U"/>
+			<!--Eletiva-->
+			<!--Urg�ncia-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_face">
+		<restriction base="string">
+			<maxLength value="5"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_formaPagamento">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!-- Cr�dito em conta -->
+			<!-- Carteira -->
+			<!-- Boleto banc�rio -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_hora">
+		<restriction base="time"/>
+	</simpleType>
+	<simpleType name="st_indicacaoClinica">
+		<restriction base="string">
+			<maxLength value="500"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_indicadorAcidente">
+		<restriction base="string">
+			<enumeration value="0"/>
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<!--Acidente ou doen�a relacionada a trabalho -->
+			<!--Acidente ou doen�a relacionada a tr�nsito -->
+			<!--Outros -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_inteiro12">
+		<restriction base="integer">
+			<totalDigits value="12"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_justificativa">
+		<restriction base="string">
+			<maxLength value="500"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_logradouro">
+		<restriction base="string">
+			<maxLength value="40"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_motivoSaida">
+		<restriction base="string">
+			<enumeration value="11"/>
+			<enumeration value="12"/>
+			<enumeration value="13"/>
+			<enumeration value="14"/>
+			<enumeration value="15"/>
+			<enumeration value="16"/>
+			<enumeration value="17"/>
+			<enumeration value="18"/>
+			<enumeration value="21"/>
+			<enumeration value="22"/>
+			<enumeration value="23"/>
+			<enumeration value="24"/>
+			<enumeration value="25"/>
+			<enumeration value="26"/>
+			<enumeration value="27"/>
+			<enumeration value="28"/>
+			<enumeration value="31"/>
+			<enumeration value="41"/>
+			<enumeration value="42"/>
+			<enumeration value="43"/>
+			<enumeration value="51"/>
+			<!-- Alta Curado-->
+			<!-- Alta Melhorado-->
+			<!-- Alta da Pu�rpera e perman�ncia do rec�m-nascido-->
+			<!-- Alta a pedido-->
+			<!-- Alta com previs�o de retorno para acompanhamento do paciente-->
+			<!-- Alta por Evas�o-->
+			<!-- Alta da Pu�rpera e rec�m-nascido-->
+			<!-- Alta por Outros motivos-->
+			<!-- Por caracter�sticas pr�prias da doen�a-->
+			<!-- Por Intercorr�ncia-->
+			<!-- Por impossibilidade s�cio-familiar-->
+			<!-- Por Processo de doa��o de �rg�os, tecidos e c�lulas - doador vivo-->
+			<!-- Por Processo de doa��o de �rg�os, tecidos e c�lulas - doador morto-->
+			<!-- Por mudan�a de Procedimento-->
+			<!-- Por reopera��o-->
+			<!-- Outros motivos-->
+			<!-- Transferido para outro estabelecimento-->
+			<!-- Com declara��o de �bito fornecida pelo m�dico assistente-->
+			<!-- Com declara��o de �bito fornecida pelo Instituto M�dico Legal - IML -->
+			<!-- Com declara��o de �bito fornecida pelo Servi�o de Verifica��o de �bito - SVO -->
+			<!-- ENCERRAMENTO ADMINISTRATIVO-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_nome">
+		<restriction base="string">
+			<maxLength value="70"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_numeroGuia">
+		<restriction base="string">
+			<maxLength value="20"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_numeroInteiro">
+		<restriction base="integer"/>
+	</simpleType>
+	<simpleType name="st_numeroLogradouro">
+		<restriction base="string">
+			<maxLength value="5"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_numeroTel">
+		<restriction base="string">
+			<maxLength value="10"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_obito">
+		<restriction base="string">
+			<enumeration value="F"/>
+			<enumeration value="N"/>
+			<!--Fetal-->
+			<!--N�o Fetal-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_obitoMulher">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!--Gr�vida no momento-->
+			<!--At� 42 dias ap�s o termino da gesta��o-->
+			<!--De 43 dias at� 12 meses ap�s o t�rmino da gesta��o	-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_observacao">
+		<restriction base="string">
+			<maxLength value="240"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_outrasDespesas">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<enumeration value="4"/>
+			<enumeration value="5"/>
+			<enumeration value="6"/>
+			<!-- Gases Medicinais -->
+			<!-- Medicamentos -->
+			<!-- Materiais -->
+			<!-- Taxas Diversas -->
+			<!-- Di�rias -->
+			<!-- Aluguel -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_percentual">
+		<restriction base="decimal">
+			<totalDigits value="5"/>
+			<fractionDigits value="2"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_posicaoProfissao">
+		<restriction base="string">
+			<enumeration value="00"/>
+			<enumeration value="01"/>
+			<enumeration value="02"/>
+			<enumeration value="03"/>
+			<enumeration value="04"/>
+			<enumeration value="05"/>
+			<enumeration value="06"/>
+			<enumeration value="07"/>
+			<enumeration value="08"/>
+			<enumeration value="09"/>
+			<enumeration value="10"/>
+			<enumeration value="11"/>
+			<enumeration value="12"/>
+			<enumeration value="13"/>
+			<!--Cirurgi�o-->
+			<!--Primeiro Auxiliar-->
+			<!--Segundo Auxiliar-->
+			<!--Terceiro Auxiliar-->
+			<!--Quarto Auxiliar-->
+			<!--Instrumentador-->
+			<!--Anestesista-->
+			<!--Auxiliar de Anestesista-->
+			<!--Consultor-->
+			<!--Perfusionista-->
+			<!--Pediatra na sala de parto-->
+			<!--Auxiliar SADT-->
+			<!--Cl�nico-->
+			<!--Intensivista-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_procedimentoSUS">
+		<restriction base="string"/>
+	</simpleType>
+	<simpleType name="st_protocolo">
+		<restriction base="string">
+			<maxLength value="12"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_quantidade">
+		<restriction base="decimal">
+			<totalDigits value="12"/>
+			<fractionDigits value="4"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_quantidadeProcedimento">
+		<restriction base="decimal">
+			<totalDigits value="7"/>
+			<fractionDigits value="4"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_quantidadeObito">
+		<restriction base="integer">
+			<totalDigits value="2"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_regiao">
+		<restriction base="string">
+			<maxLength value="5"/>
+			<enumeration value="AI"/>
+			<enumeration value="AS"/>
+			<enumeration value="HASD"/>
+			<enumeration value="HASE"/>
+			<enumeration value="HAID"/>
+			<enumeration value="HAIE"/>
+			<enumeration value="ASAI"/>
+			<enumeration value="S1"/>
+			<enumeration value="S2"/>
+			<enumeration value="S3"/>
+			<enumeration value="S4"/>
+			<enumeration value="S5"/>
+			<enumeration value="S6"/>
+			<enumeration value="LG"/>
+			<enumeration value="CL"/>
+			<enumeration value="AB"/>
+			<enumeration value="PA"/>
+			<enumeration value="MJ"/>
+			<enumeration value="PD"/>
+			<enumeration value="PM"/>
+			<enumeration value="RM"/>
+			<enumeration value="MA"/>
+			<enumeration value="GI"/>
+			<enumeration value="PT"/>
+			<enumeration value="TP"/>
+			<enumeration value="RIS"/>
+			<enumeration value="RCSD"/>
+			<enumeration value="RPSD"/>
+			<enumeration value="RMSD"/>
+			<enumeration value="RCSE"/>
+			<enumeration value="RPSE"/>
+			<enumeration value="RMSE"/>
+			<enumeration value="RII"/>
+			<enumeration value="RCID"/>
+			<enumeration value="RPID"/>
+			<enumeration value="RMID"/>
+			<enumeration value="RCIE"/>
+			<enumeration value="RPIE"/>
+			<enumeration value="RMIE"/>
+			<enumeration value="RMD"/>
+			<enumeration value="RME"/>
+			<enumeration value="RPD"/>
+			<enumeration value="RPE"/>
+			<enumeration value="RMPE"/>
+			<enumeration value="RMPD"/>
+			<enumeration value="SM"/>
+			<enumeration value="TU"/>
+			<enumeration value="SI"/>
+			<enumeration value="FLI"/>
+			<enumeration value="FLA"/>
+			<enumeration value="UV"/>
+			<enumeration value="PP"/>
+			<enumeration value="PI"/>
+			<enumeration value="LS"/>
+			<enumeration value="LI"/>
+			<enumeration value="RL"/>
+			<enumeration value="RP"/>
+			<enumeration value="RV"/>
+			<enumeration value="RSMD"/>
+			<enumeration value="RSME"/>
+			<enumeration value="RSL"/>
+			<!--Arco Inferior-->
+			<!--Arco Superior-->
+			<!--Hemi-Arco Superior Direito-->
+			<!--Hemi-Arco Superior Esquerdo-->
+			<!--Hemi-Arco Inferior Direito-->
+			<!--Hemi-Arco Inferior Esquerdo-->
+			<!--Arcadas Superiores e inferiores-->
+			<!--Sextante superior posterior direito-->
+			<!--Sextante superior anterior-->
+			<!--Sextante superior posterior esquerdo-->
+			<!--Sextante inferior posterior esquerdo-->
+			<!--Sextante inferior anterior-->
+			<!--Sextante inferior posterior direito-->
+			<!--L�ngua-->
+			<!--Comissura labial-->
+			<!--Assoalho de boca-->
+			<!--Palato-->
+			<!--Mucosa jugal-->
+			<!--Palato duro-->
+			<!--Palato mole-->
+			<!--Regi�o retromolar-->
+			<!--Mucosa alveolar-->
+			<!--Gengiva inserida-->
+			<!--Par�tida-->
+			<!--Tonsilas palatinas-->
+			<!--Regi�o dos Incisivos centrais superiores-->
+			<!--Regi�o do canino e lateral superior direito-->
+			<!--Regi�o dos pr�-molares superiores direito-->
+			<!--Regi�o dos molares superiores direito-->
+			<!--Regi�o do canino e lateral superior esquerdo-->
+			<!--Regi�o dos pr�-molares superiores esquerdo-->
+			<!--Regi�o dos molares superiores esquerdo-->
+			<!--Regi�o dos incisivos inferiores-->
+			<!--Regi�o de canino inferior direito-->
+			<!--Regi�o dos pr�-molares inferiores direito-->
+			<!--Regi�o dos molares inferiores direito-->
+			<!--Regi�o de canino inferior esquerdo-->
+			<!--Regi�o dos pr�-molares inferiores esquerdo-->
+			<!--Regi�o dos molares inferiores esquerdo-->
+			<!--Regi�o dos molares lado direito-->
+			<!--Regi�o dos molares lado esquerdo-->
+			<!--Regi�o dos pr�-molares lado direito-->
+			<!--Regi�o dos pr�-molares lado esquerdo-->
+			<!--Regi�o dos molares e pr�-molares lado esquerdo-->
+			<!--Regi�o dos molares e pr�-molares lado direito-->
+			<!--Regi�o do assoalho do seio maxilar-->
+			<!--Regi�o do T�ber-->
+			<!--Regi�o de S�nfise-->
+			<!--Freio lingual-->
+			<!--Freios labiais-->
+			<!--�vula-->
+			<!--Pregas palatinas-->
+			<!--Papila incisiva-->
+			<!--L�bio Superior-->
+			<!--L�bio inferior-->
+			<!--Regi�o lingual-->
+			<!--Regi�o palatina-->
+			<!--Regi�o vestibular-->
+			<!--Regi�o Sub-Mandibular Direita-->
+			<!--Regi�o Sub-Mandibular Esquerda-->
+			<!--Regi�o Sub-Lingual-->
+		</restriction>
+	</simpleType> 
+	<simpleType name="st_registroANS"> 
+		<restriction base="string">
+			<maxLength value="6"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_regimeInternacao">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!--1 - Hospitalar-->
+			<!--2 - Hospital_dia-->
+			<!--3 - Domiciliar-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_senhaAutorizacao">
+		<restriction base="string">
+			<maxLength value="20"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_simNao">
+		<restriction base="boolean"/>
+	</simpleType>
+	<simpleType name="st_statusCancelamento">
+		<restriction base="string">
+			<maxLength value="1"/>
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!--1 - Cancelado com sucesso-->
+			<!--2 - N�o cancelado-->
+			<!--3 - Guia inexistente-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_statusComunicacaoBeneficiario">
+		<restriction base="string">
+			<enumeration value="P"/>
+			<enumeration value="B"/>
+			<!--P - Processado-->
+			<!--B - Benefici�rio n�o reconhecido-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_statusProtocolo">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<enumeration value="4"/>
+			<enumeration value="5"/>
+			<enumeration value="6"/>
+			<enumeration value="7"/>
+			<!--Recebido-->
+			<!--Em an�lise-->
+			<!--Liberado para pagamento-->
+			<!--Encerrado sem pagamento-->
+			<!--Analisado e aguardando libera��o para o pagamento-->
+			<!--Pagamento efetuado-->
+			<!--Protocolo n�o localizado-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_statusSolicitacao">
+		<restriction base="string">
+			<length value="1"/>
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!-- Autorizado (Deve possuir pelo menos um item autorizado e pode conter itens negados)-->
+			<!-- Em an�lise (Todos os itens devem estar com a situa��o em an�lise, ou seja, se um item estiver com esta situa��o, ele levar� todos os itens da guia para esta mesma condi��o)-->
+			<!-- Negado (Todos os itens devem estar negados com a informa��o do motivo da glosa)-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tabela">
+		<restriction base="string">
+			<enumeration value="05"/>
+			<!--<enumeration value="09"/>-->
+			<enumeration value="12"/>
+			<enumeration value="13"/>
+			<enumeration value="14"/>
+			<enumeration value="15"/>
+			<enumeration value="16"/>
+			<enumeration value="17"/>
+			<enumeration value="18"/>
+			<enumeration value="19"/>
+			<enumeration value="20"/>
+			<enumeration value="21"/>
+			<enumeration value="89"/>
+			<enumeration value="90"/>
+			<!--<enumeration value="94"/>-->
+			<enumeration value="95"/>
+			<enumeration value="96"/>
+			<enumeration value="97"/>
+			<enumeration value="98"/>
+			<enumeration value="99"/>
+			<enumeration value="00"/>
+			<!-- <enumeration value="01"/>-->
+			<!-- <enumeration value="02"/>-->
+			<!-- <enumeration value="03"/>-->
+			<!-- <enumeration value="04"/>-->
+			<!-- <enumeration value="06"/>-->
+			<!-- <enumeration value="07"/>-->
+			<!-- <enumeration value="08"/>-->
+			<!-- <enumeration value="10"/>-->
+			<!-- <enumeration value="11"/>-->
+			<!-- 01 Lista de Procedimentos M�dicos AMB 90 (Inativo)** -->
+			<!-- 02 Lista de Procedimentos M�dicos AMB 92 (Inativo)** -->
+			<!-- 03 Lista de Procedimentos M�dicos AMB 96 (Inativo)** -->
+			<!-- 04 Lista de Procedimentos M�dicos AMB 99 (Inativo)** -->
+			<!-- 05 Tabela Bras�ndice -->
+			<!-- 06 Classifica��o Brasileira Hierarquizada de Procedimentos M�dicos (Inativo)** -->
+			<!-- 07 Tabela CIEFAS-93 (Inativo)** -->
+			<!-- 08 Tabela CIEFAS-2000 (Inativo)** -->
+			<!-- 09 Rol de Procedimentos ANS (Inativo)** -->
+			<!-- 10 Tabela de Procedimentos Ambulatoriais SUS (Inativo)** -->
+			<!-- 11 Tabela de Procedimentos Hospitalares SUS (Inativo)** -->
+			<!-- 12 Tabela SIMPRO -->
+			<!-- 13 Tabela TUNEP -->
+			<!-- 14 Tabela VRPO -->
+			<!-- 15 Tabela de Interc�mbio Sistema Uniodonto -->
+			<!-- 16 TUSS _ Procedimentos M�dicos -->
+			<!-- 17 TUSS _ Procedimentos Odontol�gicos -->
+			<!-- 18 TUSS _ Taxas hospitalares -->
+			<!-- 19 TUSS _ Materiais -->
+			<!-- 20 TUSS - Medicamentos -->
+			<!-- 21 TUSS _ Outras �reas da sa�de -->
+			<!-- 89 Tabela Pr�pria Procedimentos n�o m�dicos -->
+			<!-- 90 Tabela Pr�pria Pacote Odontol�gico -->
+			<!-- 94 Tabela Pr�pria Procedimentos (Inativo)** -->
+			<!-- 95 Tabela Pr�pria Materiais -->
+			<!-- 96 Tabela Pr�pria Medicamentos -->
+			<!-- 97 Tabela Pr�pria de Taxas Hospitalares -->
+			<!-- 98 Tabela Pr�pria de Pacotes -->
+			<!-- 99 Tabela Pr�pria de Gases Medicinais -->
+			<!-- 00 Outras Tabelas -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tabelasDiagnostico">
+		<restriction base="string">
+			<enumeration value="CID-10"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tecnicaUtilizada">
+		<restriction base="string">
+			<enumeration value="V"/>
+			<enumeration value="C"/>
+			<!--Videolaparoscopia-->
+			<!--Convencional-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoAcomodacao">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<enumeration value="4"/>
+			<enumeration value="5"/>
+			<enumeration value="6"/>
+			<enumeration value="7"/>
+			<enumeration value="8"/>
+			<enumeration value="11"/>
+			<enumeration value="12"/>
+			<enumeration value="13"/>
+			<enumeration value="14"/>
+			<enumeration value="15"/>
+			<enumeration value="21"/>
+			<enumeration value="22"/>
+			<enumeration value="23"/>
+			<enumeration value="31"/>
+			<enumeration value="32"/>
+			<enumeration value="33"/>
+			<enumeration value="34"/>
+			<enumeration value="35"/>
+			<enumeration value="41"/>
+			<enumeration value="42"/>
+			<enumeration value="43"/>
+			<enumeration value="51"/>
+			<enumeration value="52"/>
+			<enumeration value="53"/>
+			<enumeration value="54"/>
+			<enumeration value="55"/>
+			<enumeration value="61"/>
+			<!--Enfermaria-->
+			<!--Quarto particular-->
+			<!--UTI-->
+			<!--Enfermaria dois leitos-->
+			<!--One Day clinic-->
+			<!--Unidade intermediaria-->
+			<!--Apartamento-->
+			<!--Ambulat�rio-->
+			<!--Apartamento luxo-->
+			<!--Apartamento Simples-->
+			<!--Apartamento Standard-->
+			<!--Apartamento Su�te-->
+			<!--Apartamento com alojamento conjunto-->
+			<!--Ber��rio normal-->
+			<!--Ber��rio patol�gico / prematuro-->
+			<!--Ber��rio patol�gico com isolamento-->
+			<!--Enfermaria (3 leitos) -->
+			<!--Enfermaria (4 ou mais leitos) -->
+			<!--Enfermaria com alojamento conjunto-->
+			<!--Hospital Dia-->
+			<!--Isolamento-->
+			<!--Quarto Coletivo (2 leitos) -->
+			<!--Quarto privativo-->
+			<!--Quarto com alojamento conjunto-->
+			<!--UTI Adulto-->
+			<!--UTI Pedi�trica-->
+			<!--UTI Neo-Natal-->
+			<!--TSI - Unidade de Terapia semi-Intensiva-->
+			<!--Unidade coronariana-->
+			<!--Outras di�rias-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoAtendimento">
+		<restriction base="string">
+			<enumeration value="01"/>
+			<enumeration value="02"/>
+			<enumeration value="03"/>
+			<enumeration value="04"/>
+			<enumeration value="05"/>
+			<enumeration value="06"/>
+			<enumeration value="07"/>
+			<enumeration value="08"/>
+			<enumeration value="09"/>
+			<enumeration value="10"/>
+			<!--Remo��o-->
+			<!--Pequena Cirurgia-->
+			<!--Terapias-->
+			<!--Consulta-->
+			<!--Exames-->
+			<!--Atendimento Domiciliar-->
+			<!--SADT Internado-->
+			<!--Quimioterapia-->
+			<!--Radioterapia-->
+			<!--Terapia Renal Substitutiva (TRS) -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoConsulta">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!-- Primeira Consulta-->
+			<!--Seguimento-->
+			<!--Pr�-natal-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoDemonstrativo">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!-- Demonstrativo de Pagamento -->
+			<!-- Demonstrativo de an�lise da conta m�dica -->
+			<!-- Demonstrativo de Pagamento - Odontologia -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoDoenca">
+		<restriction base="string">
+			<enumeration value="A"/>
+			<enumeration value="C"/>
+			<!--Aguda-->
+			<!--Cronica-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoEvento">
+		<restriction base="string">
+			<enumeration value="I"/>
+			<enumeration value="A"/>
+			<!-- Inicio interna��o -->
+			<!-- Alta -->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoFaturamento">
+		<restriction base="string">
+			<enumeration value="T"/>
+			<enumeration value="P"/>
+			<!--Total-->
+			<!--Parcial-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoGlosa">
+		<restriction base="string">
+			<maxLength value="4"/>
+			<enumeration value="1001"/>
+			<enumeration value="1002"/>
+			<enumeration value="1003"/>
+			<enumeration value="1004"/>
+			<enumeration value="1005"/>
+			<enumeration value="1006"/>
+			<enumeration value="1007"/>
+			<enumeration value="1008"/>
+			<enumeration value="1009"/>
+			<enumeration value="1010"/>
+			<enumeration value="1011"/>
+			<enumeration value="1012"/>
+			<enumeration value="1013"/>
+			<enumeration value="1014"/>
+			<enumeration value="1015"/>
+			<enumeration value="1016"/>
+			<enumeration value="1017"/>
+			<enumeration value="1018"/>
+			<enumeration value="1019"/>
+			<enumeration value="1020"/>
+			<enumeration value="1021"/>
+			<enumeration value="1022"/>
+			<enumeration value="1023"/>
+			<enumeration value="1024"/>
+			<enumeration value="1099"/>
+			<enumeration value="1101"/>
+			<enumeration value="1102"/>
+			<enumeration value="1103"/>
+			<enumeration value="1104"/>
+			<enumeration value="1199"/>
+			<enumeration value="1201"/>
+			<enumeration value="1202"/>
+			<enumeration value="1203"/>
+			<enumeration value="1204"/>
+			<enumeration value="1205"/>
+			<enumeration value="1206"/>
+			<enumeration value="1207"/>
+			<enumeration value="1208"/>
+			<enumeration value="1209"/>
+			<enumeration value="1210"/>
+			<enumeration value="1211"/>
+			<enumeration value="1212"/>
+			<enumeration value="1213"/>
+			<enumeration value="1214"/>
+			<enumeration value="1215"/>
+			<enumeration value="1216"/>
+			<enumeration value="1217"/>
+			<enumeration value="1299"/>
+			<enumeration value="1301"/>
+			<enumeration value="1302"/>
+			<enumeration value="1303"/>
+			<enumeration value="1304"/>
+			<enumeration value="1305"/>
+			<enumeration value="1306"/>
+			<enumeration value="1307"/>
+			<enumeration value="1308"/>
+			<enumeration value="1309"/>
+			<enumeration value="1310"/>
+			<enumeration value="1311"/>
+			<enumeration value="1312"/>
+			<enumeration value="1313"/>
+			<enumeration value="1314"/>
+			<enumeration value="1315"/>
+			<enumeration value="1316"/>
+			<enumeration value="1317"/>
+			<enumeration value="1318"/>
+			<enumeration value="1319"/>
+			<enumeration value="1320"/>
+			<enumeration value="1321"/>
+			<enumeration value="1399"/>
+			<enumeration value="1401"/>
+			<enumeration value="1402"/>
+			<enumeration value="1403"/>
+			<enumeration value="1404"/>
+			<enumeration value="1405"/>
+			<enumeration value="1406"/>
+			<enumeration value="1407"/>
+			<enumeration value="1408"/>
+			<enumeration value="1409"/>
+			<enumeration value="1410"/>
+			<enumeration value="1411"/>
+			<enumeration value="1412"/>
+			<enumeration value="1413"/>
+			<enumeration value="1414"/>
+			<enumeration value="1415"/>
+			<enumeration value="1416"/>
+			<enumeration value="1417"/>
+			<enumeration value="1418"/>
+			<enumeration value="1419"/>
+			<enumeration value="1420"/>
+			<enumeration value="1421"/>
+			<enumeration value="1422"/>
+			<enumeration value="1423"/>
+			<enumeration value="1424"/>
+			<enumeration value="1425"/>
+			<enumeration value="1426"/>
+			<enumeration value="1427"/>
+			<enumeration value="1428"/>
+			<enumeration value="1429"/>
+			<enumeration value="1430"/>
+			<enumeration value="1431"/>
+			<enumeration value="1432"/>
+			<enumeration value="1433"/>
+			<enumeration value="1499"/>
+			<enumeration value="1501"/>
+			<enumeration value="1502"/>
+			<enumeration value="1503"/>
+			<enumeration value="1504"/>
+			<enumeration value="1505"/>
+			<enumeration value="1506"/>
+			<enumeration value="1507"/>
+			<enumeration value="1508"/>
+			<enumeration value="1509"/>
+			<enumeration value="1599"/>
+			<enumeration value="1601"/>
+			<enumeration value="1602"/>
+			<enumeration value="1603"/>
+			<enumeration value="1604"/>
+			<enumeration value="1605"/>
+			<enumeration value="1606"/>
+			<enumeration value="1607"/>
+			<enumeration value="1608"/>
+			<enumeration value="1609"/>
+			<enumeration value="1610"/>
+			<enumeration value="1611"/>
+			<enumeration value="1612"/>
+			<enumeration value="1613"/>
+			<enumeration value="1614"/>
+			<enumeration value="1615"/>
+			<enumeration value="1699"/>
+			<enumeration value="1701"/>
+			<enumeration value="1702"/>
+			<enumeration value="1703"/>
+			<enumeration value="1704"/>
+			<enumeration value="1705"/>
+			<enumeration value="1706"/>
+			<enumeration value="1707"/>
+			<enumeration value="1708"/>
+			<enumeration value="1709"/>
+			<enumeration value="1710"/>
+			<enumeration value="1711"/>
+			<enumeration value="1712"/>
+			<enumeration value="1713"/>
+			<enumeration value="1714"/>
+			<enumeration value="1715"/>
+			<enumeration value="1716"/>
+			<enumeration value="1799"/>
+			<enumeration value="1801"/>
+			<enumeration value="1802"/>
+			<enumeration value="1803"/>
+			<enumeration value="1804"/>
+			<enumeration value="1805"/>
+			<enumeration value="1806"/>
+			<enumeration value="1807"/>
+			<enumeration value="1808"/>
+			<enumeration value="1809"/>
+			<enumeration value="1810"/>
+			<enumeration value="1811"/>
+			<enumeration value="1812"/>
+			<enumeration value="1813"/>
+			<enumeration value="1814"/>
+			<enumeration value="1815"/>
+			<enumeration value="1816"/>
+			<enumeration value="1817"/>
+			<enumeration value="1818"/>
+			<enumeration value="1819"/>
+			<enumeration value="1820"/>
+			<enumeration value="1821"/>
+			<enumeration value="1822"/>
+			<enumeration value="1823"/>
+			<enumeration value="1824"/>
+			<enumeration value="1825"/>
+			<enumeration value="1899"/>
+			<enumeration value="1901"/>
+			<enumeration value="1902"/>
+			<enumeration value="1903"/>
+			<enumeration value="1904"/>
+			<enumeration value="1905"/>
+			<enumeration value="1906"/>
+			<enumeration value="1907"/>
+			<enumeration value="1908"/>
+			<enumeration value="1909"/>
+			<enumeration value="1910"/>
+			<enumeration value="1911"/>
+			<enumeration value="1912"/>
+			<enumeration value="1913"/>
+			<enumeration value="1914"/>
+			<enumeration value="1915"/>
+			<enumeration value="1916"/>
+			<enumeration value="1999"/>
+			<enumeration value="2001"/>
+			<enumeration value="2002"/>
+			<enumeration value="2003"/>
+			<enumeration value="2004"/>
+			<enumeration value="2005"/>
+			<enumeration value="2006"/>
+			<enumeration value="2007"/>
+			<enumeration value="2008"/>
+			<enumeration value="2009"/>
+			<enumeration value="2010"/>
+			<enumeration value="2011"/>
+			<enumeration value="2012"/>
+			<enumeration value="2013"/>
+			<enumeration value="2014"/>
+			<enumeration value="2099"/>
+			<enumeration value="2101"/>
+			<enumeration value="2102"/>
+			<enumeration value="2103"/>
+			<enumeration value="2104"/>
+			<enumeration value="2105"/>
+			<enumeration value="2106"/>
+			<enumeration value="2107"/>
+			<enumeration value="2108"/>
+			<enumeration value="2109"/>
+			<enumeration value="2110"/>
+			<enumeration value="2111"/>
+			<enumeration value="2112"/>
+			<enumeration value="2113"/>
+			<enumeration value="2114"/>
+			<enumeration value="2199"/>
+			<enumeration value="2201"/>
+			<enumeration value="2202"/>
+			<enumeration value="2203"/>
+			<enumeration value="2204"/>
+			<enumeration value="2205"/>
+			<enumeration value="2206"/>
+			<enumeration value="2207"/>
+			<enumeration value="2208"/>
+			<enumeration value="2209"/>
+			<enumeration value="2210"/>
+			<enumeration value="2211"/>
+			<enumeration value="2299"/>
+			<enumeration value="2301"/>
+			<enumeration value="2302"/>
+			<enumeration value="2303"/>
+			<enumeration value="2304"/>
+			<enumeration value="2305"/>
+			<enumeration value="2306"/>
+			<enumeration value="2307"/>
+			<enumeration value="2308"/>
+			<enumeration value="2309"/>
+			<enumeration value="2310"/>
+			<enumeration value="2399"/>
+			<enumeration value="2401"/>
+			<enumeration value="2402"/>
+			<enumeration value="2403"/>
+			<enumeration value="2404"/>
+			<enumeration value="2405"/>
+			<enumeration value="2406"/>
+			<enumeration value="2407"/>
+			<enumeration value="2408"/>
+			<enumeration value="2409"/>
+			<enumeration value="2410"/>
+			<enumeration value="2411"/>
+			<enumeration value="2412"/>
+			<enumeration value="2413"/>
+			<enumeration value="2414"/>
+			<enumeration value="2415"/>
+			<enumeration value="2416"/>
+			<enumeration value="2417"/>
+			<enumeration value="2418"/>
+			<enumeration value="2419"/>
+			<enumeration value="2420"/>
+			<enumeration value="2421"/>
+			<enumeration value="2422"/>
+			<enumeration value="2423"/>
+			<enumeration value="2424"/>
+			<enumeration value="2499"/>
+			<enumeration value="2501"/>
+			<enumeration value="2502"/>
+			<enumeration value="2503"/>
+			<enumeration value="2504"/>
+			<enumeration value="2505"/>
+			<enumeration value="2506"/>
+			<enumeration value="2507"/>
+			<enumeration value="2508"/>
+			<enumeration value="2509"/>
+			<enumeration value="2510"/>
+			<enumeration value="2511"/>
+			<enumeration value="2512"/>
+			<enumeration value="2513"/>
+			<enumeration value="2514"/>
+			<enumeration value="2515"/>
+			<enumeration value="2516"/>
+			<enumeration value="2599"/>
+			<enumeration value="2601"/>
+			<enumeration value="2602"/>
+			<enumeration value="2603"/>
+			<enumeration value="2604"/>
+			<enumeration value="2605"/>
+			<enumeration value="2606"/>
+			<enumeration value="2607"/>
+			<enumeration value="2608"/>
+			<enumeration value="2609"/>
+			<enumeration value="2699"/>
+			<enumeration value="2701"/>
+			<enumeration value="2702"/>
+			<enumeration value="2703"/>
+			<enumeration value="2704"/>
+			<enumeration value="2705"/>
+			<enumeration value="2706"/>
+			<enumeration value="2707"/>
+			<enumeration value="2708"/>
+			<enumeration value="2709"/>
+			<enumeration value="2710"/>
+			<enumeration value="2711"/>
+			<enumeration value="2712"/>
+			<enumeration value="2713"/>
+			<enumeration value="2714"/>
+			<enumeration value="2715"/>
+			<enumeration value="2716"/>
+			<enumeration value="2717"/>
+			<enumeration value="2718"/>
+			<enumeration value="2799"/>
+			<enumeration value="2801"/>
+			<enumeration value="2802"/>
+			<enumeration value="2803"/>
+			<enumeration value="2804"/>
+			<enumeration value="2805"/>
+			<enumeration value="2806"/>
+			<enumeration value="2807"/>
+			<enumeration value="2808"/>
+			<enumeration value="2809"/>
+			<enumeration value="2810"/>
+			<enumeration value="2811"/>
+			<enumeration value="2812"/>
+			<enumeration value="2813"/>
+			<enumeration value="2814"/>
+			<enumeration value="2815"/>
+			<enumeration value="2816"/>
+			<enumeration value="2817"/>
+			<enumeration value="2818"/>
+			<enumeration value="2819"/>
+			<enumeration value="2820"/>
+			<enumeration value="2821"/>
+			<enumeration value="2822"/>
+			<enumeration value="2899"/>
+			<enumeration value="2901"/>
+			<enumeration value="2902"/>
+			<enumeration value="2903"/>
+			<enumeration value="2904"/>
+			<enumeration value="2905"/>
+			<enumeration value="2906"/>
+			<enumeration value="2999"/>
+			<enumeration value="3001"/>
+			<enumeration value="3002"/>
+			<enumeration value="3003"/>
+			<enumeration value="3004"/>
+			<enumeration value="3005"/>
+			<enumeration value="3006"/>
+			<enumeration value="3007"/>
+			<enumeration value="3008"/>
+			<enumeration value="3009"/>
+			<enumeration value="3010"/>
+			<enumeration value="3011"/>
+			<enumeration value="3012"/>
+			<enumeration value="3013"/>
+			<enumeration value="3014"/>
+			<enumeration value="3015"/>
+			<enumeration value="3016"/>
+			<enumeration value="3017"/>
+			<enumeration value="3018"/>
+			<enumeration value="3019"/>
+			<enumeration value="3020"/>
+			<enumeration value="3021"/>
+			<enumeration value="3022"/>
+			<enumeration value="3023"/>
+			<enumeration value="3024"/>
+			<enumeration value="3025"/>
+			<enumeration value="3026"/>
+			<enumeration value="3027"/>
+			<enumeration value="3028"/>
+			<enumeration value="3029"/>
+			<enumeration value="3030"/>
+			<enumeration value="3031"/>
+			<enumeration value="3032"/>
+			<enumeration value="3033"/>
+			<enumeration value="3034"/>
+			<enumeration value="3035"/>
+			<enumeration value="3036"/>
+			<enumeration value="3037"/>
+			<enumeration value="3038"/>
+			<enumeration value="3039"/>
+			<enumeration value="3040"/>
+			<enumeration value="3099"/>
+			<enumeration value="5001"/>
+			<enumeration value="5002"/>
+			<enumeration value="5003"/>
+			<enumeration value="5004"/>
+			<enumeration value="5005"/>
+			<enumeration value="5006"/>
+			<enumeration value="5007"/>
+			<enumeration value="5008"/>
+			<enumeration value="5009"/>
+			<enumeration value="5010"/>
+			<enumeration value="5011"/>
+			<enumeration value="5012"/>
+			<enumeration value="5013"/>
+			<enumeration value="5014"/>
+			<enumeration value="5015"/>
+			<enumeration value="5099"/>
+			<enumeration value="9901"/>
+			<enumeration value="9902"/>
+			<enumeration value="9903"/>
+			<enumeration value="9904"/>
+			<enumeration value="9905"/>
+			<enumeration value="9906"/>
+			<enumeration value="9907"/>
+			<enumeration value="9908"/>
+			<enumeration value="9909"/>
+			<enumeration value="9910"/>
+			<enumeration value="9911"/>
+			<enumeration value="9912"/>
+			<enumeration value="9913"/>
+			<enumeration value="9914"/>
+			<enumeration value="9915"/>
+			<enumeration value="9916"/>
+			<enumeration value="9917"/>
+			<enumeration value="9918"/>
+			<enumeration value="9919"/>
+			<enumeration value="9920"/>
+			<enumeration value="9921"/>
+			<enumeration value="9922"/>
+			<enumeration value="9923"/>
+			<enumeration value="9924"/>
+			<enumeration value="9925"/>
+			<enumeration value="9926"/>
+			<enumeration value="9927"/>
+			<enumeration value="9928"/>
+			<enumeration value="9929"/>
+			<enumeration value="9930"/>
+			<enumeration value="9931"/>
+			<enumeration value="9932"/>
+			<enumeration value="9933"/>
+			<enumeration value="9934"/>
+			<enumeration value="9935"/>
+			<enumeration value="9936"/>
+			<enumeration value="9937"/>
+			<enumeration value="9938"/>
+			<enumeration value="9939"/>
+			<enumeration value="9940"/>
+			<enumeration value="9941"/>
+			<enumeration value="9942"/>
+			<enumeration value="9943"/>
+			<enumeration value="9944"/>
+			<enumeration value="9945"/>
+			<enumeration value="9946"/>
+			<enumeration value="9947"/>
+			<enumeration value="9948"/>
+			<enumeration value="9949"/>
+			<enumeration value="9950"/>
+			<enumeration value="9951"/>
+			<enumeration value="9952"/>
+			<enumeration value="9953"/>
+			<enumeration value="9954"/>
+			<enumeration value="9955"/>
+			<enumeration value="9956"/>
+			<enumeration value="9957"/>
+			<enumeration value="9958"/>
+			<enumeration value="9959"/>
+			<enumeration value="9960"/>
+			<enumeration value="9961"/>
+			<enumeration value="9962"/>
+			<enumeration value="9963"/>
+			<enumeration value="9964"/>
+			<enumeration value="9965"/>
+			<enumeration value="9966"/>
+			<enumeration value="9967"/>
+			<enumeration value="9968"/>
+			<enumeration value="9969"/>
+			<enumeration value="9970"/>
+			<enumeration value="9971"/>
+			<enumeration value="9972"/>
+			<enumeration value="9973"/>
+			<enumeration value="9974"/>
+			<enumeration value="9975"/>
+			<enumeration value="9976"/>
+			<enumeration value="9977"/>
+			<enumeration value="9978"/>
+			<enumeration value="9979"/>
+			<enumeration value="9980"/>
+			<enumeration value="9981"/>
+			<enumeration value="9982"/>
+			<enumeration value="9983"/>
+			<enumeration value="9984"/>
+			<enumeration value="9985"/>
+			<enumeration value="9986"/>
+			<enumeration value="9987"/>
+			<enumeration value="9988"/>
+			<enumeration value="9989"/>
+			<enumeration value="9990"/>
+			<enumeration value="9991"/>
+			<enumeration value="9992"/>
+			<enumeration value="9993"/>
+			<enumeration value="9994"/>
+			<enumeration value="9995"/>
+			<enumeration value="9996"/>
+			<enumeration value="9997"/>
+			<enumeration value="9998"/>
+			<enumeration value="9999"/>
+			<!--N�mero da carteira inv�lido-->
+			<!--N�mero do Cart�o Nacional de Sa�de inv�lido-->
+			<!--A admiss�o do Benefici�rio no prestador ocorreu antes da inclus�o do Benefici�rio na Operadora-->
+			<!--Solicita��o Anterior � Inclus�o do Benefici�rio-->
+			<!--Atendimento anterior � inclus�o do Benefici�rio-->
+			<!--Atendimento ap�s o desligamento do Benefici�rio-->
+			<!--Atendimento dentro da car�ncia do Benefici�rio-->
+			<!--Assinatura divergente-->
+			<!--Benefici�rio com pagamento em aberto-->
+			<!--Assinatura do Titular / Respons�vel inexistente-->
+			<!--Identifica��o do benefici�rio n�o consistente-->
+			<!--Servi�o Profissional Hospitalar n�o � coberto pelo plano do benefici�rio-->
+			<!--Cadastro do benefici�rio com problemas-->
+			<!--Benefici�rio com data de exclus�o-->
+			<!--Idade do Benefici�rio acima idade limite-->
+			<!--Benefici�rio com atendimento suspenso-->
+			<!--Data Validade da Carteira Vencida-->
+			<!--Empresa do benefici�rio suspensa / exclu�da-->
+			<!--Fam�lia do Benefici�rio com atendimento suspenso-->
+			<!--Via de Cart�o do Benefici�rio Cancelada-->
+			<!--Via de Cart�o do Benefici�rio n�o liberada-->
+			<!--Via de Cart�o do benefici�rio n�o compat�vel-->
+			<!--Nome do titular inv�lido-->
+			<!--Plano n�o existente-->
+			<!--Outros-->
+			<!--Quantidade de Guias informadas no Protocolo diferente das cadastradas-->
+			<!--Protocolo � de re-apresenta��o-->
+			<!--Protocolo n�o � de reapresenta��o-->
+			<!--Valor total do protocolo diferente do valor total das guias-->
+			<!--Outros-->
+			<!--Atendimento fora da vig�ncia do contrato com o credenciado-->
+			<!--N�mero do CNES inv�lido-->
+			<!--C�digo Prestador inv�lido-->
+			<!--Admiss�o anterior � inclus�o do credenciado na rede-->
+			<!--Admiss�o ap�s o desligamento do credenciado da rede-->
+			<!--CPF / CNPJ inv�lido-->
+			<!--Credenciado n�o pertence � Rede Credenciada-->
+			<!--Solicita��o anterior � inclus�o do Credenciado-->
+			<!--Solicita��o ap�s o desligamento do Credenciado-->
+			<!--Solicitante Credenciado n�o cadastrado-->
+			<!--Assinatura / Carimbo do Credenciado inexistente-->
+			<!--Atendimento / Refer�ncia fora da vig�ncia do contrato do prestador-->
+			<!--CBO-S (especialidade) inv�lido-->
+			<!--Credenciado n�o habilitado a realizar o procedimento-->
+			<!--Credenciado fora da abrang�ncia geogr�fica do plano-->
+			<!--Especialidade n�o cadastrada-->
+			<!--Especialidade n�o cadastrada para o prestador-->
+			<!--Outros-->
+			<!--Tipo Guia inv�lido-->
+			<!--C�digo Tipo Guia Principal e N�mero Guias Incompat�veis-->
+			<!--N�o existe o N�mero Guia Principal informado-->
+			<!--Cobran�a em guia indevida-->
+			<!--Item pago em outra Guia-->
+			<!--N�o existe N�mero Guia Principal e/ou C�digo Guia Principal-->
+			<!--N�mero da guia inv�lido-->
+			<!--Guia j� apresentada-->
+			<!--Procedimento contratado n�o est� de acordo com o tipo de guia utilizado-->
+			<!--Servi�o do tipo cir�rgico e invasivo. Equipe m�dica n�o informada na guia-->
+			<!--Prestador executante n�o informado-->
+			<!--Prestador contratado n�o informado-->
+			<!--Guia com rasura-->
+			<!--Guia sem assinatura e/ou carimbo do credenciado. -->
+			<!--Guia sem data do ato cir�rgico. -->
+			<!--Guia com local de atendimento preenchido incorretamente. -->
+			<!--Guia sem data do atendimento-->
+			<!--Guia com c�digo de servi�o preenchido incorretamente. -->
+			<!--Guia sem assinatura do assistido. -->
+			<!--Identifica��o do assistido incompleta-->
+			<!--Validade da guia expirada-->
+			<!--Outros-->
+			<!--Acomoda��o n�o autorizada-->
+			<!--Procedimento n�o autorizado-->
+			<!--N�o existe informa��o sobre a senha de autoriza��o do procedimento-->
+			<!--N�o existe guia de autoriza��o relacionada-->
+			<!--Data de Validade da Senha � anterior a Data do Atendimento-->
+			<!--N�mero da Senha informado diferente do liberado-->
+			<!--Servi�o solicitado n�o possui cobertura-->
+			<!--Quantidade Servi�o Solicitada acima da Autorizada-->
+			<!--Quantidade Servi�o solicitada acima coberta-->
+			<!--Servi�o solicitado em Car�ncia-->
+			<!--Solicitante n�o Informado-->
+			<!--Problemas no sistema autorizador-->
+			<!--Acomoda��o n�o possui cobertura-->
+			<!--Data de validade da senha expirada-->
+			<!--Procedimento n�o autorizado para o Benefici�rio-->
+			<!--Solicitante n�o Cadastrado-->
+			<!--Solicitante n�o habilitado-->
+			<!--Solicitante suspenso-->
+			<!--Servi�o solicitado j� autorizado-->
+			<!--Servi�o solicitado fora da cobertura-->
+			<!--Servi�o solicitado � de pr�-exist�ncia-->
+			<!--Especialidade n�o cadastrada para o Solicitante-->
+			<!--Quantidade solicitada acima da quantidade permitida-->
+			<!--Quantidade autorizada acima da quantidade permitida-->
+			<!--Necessita pr�-autoriza��o da empresa-->
+			<!--N�o autorizado pela auditoria m�dica-->
+			<!--Necessidade de auditoria m�dica-->
+			<!--Falta de autoriza��o da empresa de conectividade-->
+			<!--CBO-S (especialidade) n�o autorizado a realizar o servi�o-->
+			<!--Procedimento odontol�gico n�o autorizado-->
+			<!--Procedimento n�o autorizado na face solicitada-->
+			<!--Procedimento n�o autorizado para dente/regi�o solicitada-->
+			<!--Procedimento n�o autorizado, dente ausente-->
+			<!--Outros-->
+			<!--Tempo de Evolu��o da doen�a Inv�lido-->
+			<!--Tipo de Doen�a inv�lido-->
+			<!--Indicador de Acidente Inv�lido-->
+			<!--Car�ter de Interna��o Inv�lido-->
+			<!--Regime da interna��o inv�lido-->
+			<!--Tipo de Interna��o Inv�lido-->
+			<!--Urg�ncia n�o aplic�vel-->
+			<!--C�digo CID n�o Informado-->
+			<!--C�digo CID inv�lido-->
+			<!--Outros-->
+			<!--Reincid�ncia no atendimento-->
+			<!--Tipo de atendimento inv�lido ou n�o informado-->
+			<!--Tipo de consulta inv�lido-->
+			<!--Tipo de sa�da inv�lido-->
+			<!--Interven��o anterior a Admiss�o-->
+			<!--Final da Interven��o anterior ao In�cio da Interven��o-->
+			<!--Alta Hospitalar anterior ao Final da Interven��o-->
+			<!--Alta anterior � data de interna��o-->
+			<!--Motivo Sa�da Inv�lido-->
+			<!--�bito Mulher Inv�lido-->
+			<!--Interven��o anterior a Interna��o-->
+			<!--Servi�o n�o pode ser realizado no local especificado-->
+			<!--Consulta n�o autorizada-->
+			<!--Servi�o ambulatorial n�o autorizado-->
+			<!--Interna��o n�o autorizada-->
+			<!--Outros-->
+			<!--Cobran�a fora do prazo de validade-->
+			<!--Cobran�a de procedimento em duplicidade-->
+			<!--Hor�rio do atendimento n�o est� na faixa de urg�ncia/emerg�ncia-->
+			<!--Valor cobrado superior ao acordado em pacote-->
+			<!--Valor apresentado a maior-->
+			<!--Valor apresentado a menor-->
+			<!--N�o existe informa��o sobre a tabela que ser� utilizada na Valora��o. Verifique o Contrato do Prestador-->
+			<!--N�o existe valor para o procedimento realizado-->
+			<!--Falta prescri��o m�dica-->
+			<!--Falta visto da Enfermagem-->
+			<!--Procedimento pertence a um pacote acordado e j� cobrado-->
+			<!--Assinatura do M�dico respons�vel pelo exame inexistente-->
+			<!--Faturamento Inv�lido-->
+			<!--Valor do servi�o superior ao valor de tabela-->
+			<!--Valor do servi�o inferior ao valor de tabela-->
+			<!--Percentual de redu��o/acr�scimo fora dos valores definidos em tabela-->
+			<!--Outros-->
+			<!--Procedimento inv�lido-->
+			<!--Procedimento incompat�vel com o sexo do Benefici�rio-->
+			<!--Idade do Benefici�rio incompat�vel com o Procedimento-->
+			<!--N�mero de dias liberados / sess�es autorizadas n�o informadas-->
+			<!--Valor total do procedimento diferente do Valor Processado-->
+			<!--Quantidade de procedimento deve ser maior que zero-->
+			<!--Procedimentos m�dicos duplicados-->
+			<!--Procedimento n�o conforme com CID-->
+			<!--Cobran�a de procedimento n�o executado-->
+			<!--Cobran�a de procedimento n�o solicitado pelo m�dico-->
+			<!--Procedimento sem registro de execu��o-->
+			<!--Cobran�a de procedimento n�o correlacionado ao relat�rio espec�fico-->
+			<!--Cobran�a de procedimento sem justificativa para realiza��o ou com justificativa insuficiente. -->
+			<!--Cobran�a de procedimento com data de autoriza��o posterior � do atendimento. -->
+			<!--Procedimento n�o autorizado-->
+			<!--Cobran�a de procedimento em quantidade incompat�vel com o procedimento/evolu��o cl�nica-->
+			<!--Cobran�a de procedimento incluso no procedimento principal-->
+			<!--Cobran�a de procedimento que exige autoriza��o pr�via-->
+			<!--Cobran�a de procedimento com hist�ria cl�nica/hip�tese diagn�stica n�o compat�vel-->
+			<!--Cobran�a de procedimento em quantidade acima da m�xima permitida/autorizada-->
+			<!--Cobran�a de procedimento n�o compat�vel com a idade. -->
+			<!--Cobran�a de procedimento com aus�ncia de resultado ou laudo t�cnico. -->
+			<!--Procedimento realizado pelo mesmo profissional, na mesma especialidade, no prazo inferior ao estipulado sem justificativa adequada. -->
+			<!--Procedimento cobrado n�o corresponde ao exame executado-->
+			<!--Cobran�a de procedimento ambulatorial com data de autoriza��o posterior � do atendimento. -->
+			<!--Outros-->
+			<!--Acomoda��o inv�lida-->
+			<!--Acomoda��o informada n�o est� de acordo com acomoda��o contratada-->
+			<!--Perman�ncia hospitalar incompat�vel com a evolu��o cl�nica-->
+			<!--Perman�ncia hospitalar incompat�vel com o procedimento autorizado-->
+			<!--Quantidade de di�rias deve ser maior que zero-->
+			<!--Acomoda��o n�o informada-->
+			<!--Quantidade UTI n�o prevista para procedimento-->
+			<!--Usu�rio n�o possui cobertura de UTI-->
+			<!--Acomoda��o n�o autorizada-->
+			<!--Cobran�a de di�rias em locais de acomoda��es diferentes, no mesmo dia. -->
+			<!--Perman�ncia hospitalar para investiga��o injustificada. -->
+			<!--Evolu��o cl�nica n�o compat�vel com a perman�ncia em UTI. -->
+			<!--C�digo de di�ria incompat�vel com o local de atendimento. -->
+			<!--Cobran�a de di�ria em quantidade incompat�vel com a perman�ncia hospitalar. -->
+			<!--Mudan�a de acomoda��o sem comunica��o ao paciente, familiar ou acompanhante, ou sem solicita��o destes. -->
+			<!--Cobran�a de di�rias de UTI incompat�vel com diagn�stico e evolu��o cl�nica. -->
+			<!--Outros-->
+			<!--Material inv�lido-->
+			<!--Material sem cobertura para atendimento ambulatorial-->
+			<!--Material n�o especificado-->
+			<!--Material sem nota fiscal do fornecedor-->
+			<!--Quantidade de material deve ser maior que zero-->
+			<!--Material informado n�o coberto-->
+			<!--Cobran�a de material em quantidade incompat�vel com a perman�ncia. -->
+			<!--Cobran�a de material em quantidades incompat�veis com o procedimento realizado. -->
+			<!--Quantidade de material superior a quantidade coberta-->
+			<!--Cobran�a de materiais inclusos nas taxas-->
+			<!--Cobran�a de material incluso no pacote negociado. -->
+			<!--Cobran�a de material incompat�vel com o relat�rio t�cnico. -->
+			<!--Cobran�a de material em perman�ncia hospitalar n�o autorizada. -->
+			<!--Cobran�a de material n�o utilizado-->
+			<!--Outros-->
+			<!--Medicamento inv�lido-->
+			<!--Medicamento sem cobertura para atendimento ambulatorial-->
+			<!--Medicamento n�o especificado-->
+			<!--Medicamento sem nota fiscal do fornecedor-->
+			<!--Quantidade de medicamentos deve ser maior que zero-->
+			<!--Medicamento informado n�o coberto-->
+			<!--Cobran�a de medicamento em quantidade incompat�vel com a perman�ncia. -->
+			<!--Cobran�a de medicamento em quantidades incompat�veis com o procedimento realizado. -->
+			<!--Quantidade de medicamento superior a quantidade coberta-->
+			<!--Cobran�a de medicamento inclusos nas taxas-->
+			<!--Cobran�a de medicamento incluso no pacote negociado. -->
+			<!--Cobran�a de medicamento incompat�vel com o relat�rio t�cnico. -->
+			<!--Cobran�a de medicamento em perman�ncia hospitalar n�o autorizada. -->
+			<!--Cobran�a de medicamento n�o utilizado-->
+			<!--Outros-->
+			<!--OPM inv�lido-->
+			<!--OPM sem cobertura para atendimento ambulatorial-->
+			<!--OPM sem nota fiscal do fornecedor-->
+			<!--Quantidade de OPM deve ser maior que zero-->
+			<!--OPM informado n�o coberto-->
+			<!--OPM informado n�o autorizado-->
+			<!--Cobran�a de OPM n�o utilizado-->
+			<!--Cobran�a de OPM no item material e medicamentos. -->
+			<!--Cobran�a de OPM em desacordo com relat�rio t�cnico-->
+			<!--Cobran�a de OPM em quantidade incompat�vel com o procedimento realizado-->
+			<!--Cobran�a de OPM inclusa no pacote-->
+			<!--Outros-->
+			<!--Gases Medicinais inv�lidos-->
+			<!--Cobran�a de oxigenoterapia sem prescri��o m�dica. -->
+			<!--Cobran�a de oxigenoterapia com quantitativo de uso em diverg�ncia/pago valor corrigido. -->
+			<!--Cobran�a de oxig�nio incluso na taxa de nebuliza��o especificada. -->
+			<!--Cobran�a de oxigenoterapia em uso prolongado  sem  justificativa de uso. -->
+			<!--Cobran�a de oxigenoterapia sem registro de controle de uso (entrada e sa�da). -->
+			<!--Cobran�a de gases em quantidade superior ao per�odo de perman�ncia-->
+			<!--Cobran�a de CO2 nas cirurgias videolaparosc�picas durante toda a realiza��o do procedimento (in�cio ao fim). -->
+			<!--Cobran�a de ar comprimido sem registro no Boletim Anest�sico e dura��o de uso. -->
+			<!--Cobran�a de gases incompat�vel com o utilizado/ prescrito. -->
+			<!--Outros-->
+			<!--Taxa / Aluguel inv�lido-->
+			<!--Cobran�a de taxa por uso de equipamento incompat�vel com o procedimento realizado/uso previsto no procedimento. -->
+			<!--Cobran�a de taxa de uso de bomba de infus�o em paciente internado na UTI-->
+			<!--Cobran�a de outras taxas associadas/inclusas na cobran�a da taxa de sala prevista. -->
+			<!--Cobran�a de mais de uma taxa de sala de cirurgia, por conta do n�mero de procedimentos realizados no mesmo tempo cir�rgico. -->
+			<!--Cobran�a indevida de taxa de sala por administra��o de medicamentos. -->
+			<!--Cobran�a de taxas, de servi�os realizados em ambientes incompat�veis com o uso de equipamentos. -->
+			<!--Cobran�a de taxas em quantidade superior ao tempo de perman�ncia hospitalar-->
+			<!--Cobran�a de taxa de observa��o em pronto socorro com perman�ncia menor que o per�odo estipulado-->
+			<!--Cobran�a de taxa de observa��o em pronto socorro sem o registro da perman�ncia. -->
+			<!--Cobran�a de taxa de sala de pronto socorro, para aplica��o de medicamentos. -->
+			<!--Cobran�a de taxa de recupera��o anest�sica n�o justificada para o procedimento. -->
+			<!--Cobran�a de taxa inclusa no pacote negociado. -->
+			<!--Cobran�a de taxa de equipamento em concomit�ncia com a cobran�a de taxa para o procedimento. -->
+			<!--Taxa exige informa��o do valor na Guia. -->
+			<!--Cobran�a de taxa de recupera��o anest�sica para pacientes com p�s-operat�rio imediato realizado na UTI/CTI. -->
+			<!--Cobran�a de taxa de recupera��o anest�sica sem a presen�a do anestesista. -->
+			<!--Cobran�a de taxa de sala incompat�vel com o procedimento. -->
+			<!--Cobran�a de taxa de observa��o para atendimento que gerou uma interna��o. -->
+			<!--Cobran�a de taxa de sala cir�rgica com porte anest�sico diferente do procedimento autorizado/realizado. -->
+			<!--Cobran�a de taxa em quantidade incorreta. -->
+			<!--Cobran�a de taxa por uso de equipamento de uso obrigat�rio na sala de cirurgia, cuja taxa de sala cir�rgica j� inclui seu uso. -->
+			<!--Cobran�a de taxa de equipamentos de uso obrigat�rio no local de atendimento. -->
+			<!--Cobran�a de taxa de observa��o para atendimento que gerou uma interna��o. -->
+			<!--Outros-->
+			<!--Procedimento em s�rie inv�lido-->
+			<!--Cobran�a de duas avalia��es fisioter�picas-->
+			<!--Cobran�a de psicoterapia individual, quando o aplicado � a cobran�a de psicoterapia em grupo-->
+			<!--Quantidade de sess�es cobradas n�o condizem com as assinaturas no controle de tratamento seriado-->
+			<!--O c�digo cobrado � diferente do c�digo autorizado-->
+			<!--A quantidade de sess�es cobradas � diferente da quantidade autorizada-->
+			<!--O c�digo autorizado est� incompat�vel com a prescri��o m�dica solicitada-->
+			<!--Cobran�a de sess�es sem o devido plano de tratamento e, ou, com o prazo de pagamento expirado-->
+			<!--Cobran�a do procedimento seriado incompat�vel com o quadro cl�nico-->
+			<!--Cobran�a do procedimento seriado em n�mero de sess�es acima da quantidade estabelecida-->
+			<!--Aus�ncia de evolu��o no prontu�rio m�dico do tratamento seriado realizado. -->
+			<!--Cobran�a de sess�es de fisioterapia em desacordo com as evolu��es do prontu�rio m�dico-->
+			<!--Cobran�a de tratamento seriado sem justificativa cl�nica/t�cnica-->
+			<!--Servi�o n�o contratado para o prestador-->
+			<!--Local de atendimento inadequado-->
+			<!--Quantidade cobrada diferente da realizada-->
+			<!--Outros-->
+			<!--Codifica��o incorreta/inadequada do procedimento. -->
+			<!--Cobran�a de honor�rio incluso no procedimento principal-->
+			<!--Cobran�a de honor�rio sem registro da efetiva participa��o do profissional-->
+			<!--Procedimento principal n�o requer equipe m�dica-->
+			<!--N�o cabe pagamento do honor�rio integral por ser a mesma via de acesso cir�rgico. -->
+			<!--Cobran�a do honor�rio em local de atendimento incorreto (inexistente). -->
+			<!--Cobran�a de Honor�rios em duplicidade.-->
+			<!--Cobran�a de consulta indevida, quando o procedimento principal j� est� sendo remunerado. -->
+			<!--Local de atendimento n�o informado. -->
+			<!--Outros-->
+			<!--Procedimento inv�lido-->
+			<!--Cobran�a de exame n�o solicitado pelo m�dico-->
+			<!--Exame sem registro de execu��o-->
+			<!--Cobran�a de exame n�o correlacionado ao relat�rio espec�fico-->
+			<!--Cobran�a de procedimento/exame sem justificativa para realiza��o ou com justificativa insuficiente. -->
+			<!--Cobran�a de procedimento/exame com data de autoriza��o posterior � do atendimento. -->
+			<!--Exame n�o autorizado-->
+			<!--Cobran�a de exame em quantidade incompat�vel com o procedimento/evolu��o cl�nica-->
+			<!--Cobran�a de procedimento incluso no procedimento principal-->
+			<!--Cobran�a de exame que exige autoriza��o pr�via-->
+			<!--Cobran�a de exame com hist�ria cl�nica/hip�tese diagn�stica n�o compat�vel-->
+			<!--Cobran�a de exame em quantidade acima da m�xima permitida/autorizada-->
+			<!--Cobran�a de exame n�o compat�vel com a idade. -->
+			<!--Cobran�a de exame com aus�ncia de resultado ou laudo t�cnico. -->
+			<!--Exame realizado pelo mesmo profissional, na mesma especialidade, no prazo inferior ao estipulado sem justificativa adequada. -->
+			<!--Exame cobrado n�o corresponde ao exame executado-->
+			<!--Cobran�a de exame ambulatorial com data de autoriza��o posterior � do atendimento. -->
+			<!--Exames n�o justificam car�ter de urg�ncia-->
+			<!--Outros-->
+			<!--Pacote inv�lido-->
+			<!--Pacote incompat�vel com o sexo do Benefici�rio-->
+			<!--Idade do Benefici�rio incompat�vel com o Pacote-->
+			<!--Valor total do pacote diferente do Valor Processado-->
+			<!--Valor do pacote superior ao valor dos itens-->
+			<!--Cobran�a de pacote n�o executado-->
+			<!--Cobran�a de pacote n�o solicitado pelo m�dico-->
+			<!--Pacote sem registro de execu��o-->
+			<!--Cobran�a de pacote n�o correlacionado ao relat�rio espec�fico-->
+			<!--Cobran�a de pacote sem justificativa para realiza��o ou com justificativa insuficiente. -->
+			<!--Cobran�a de pacote com data de autoriza��o posterior � do atendimento. -->
+			<!--Pacote n�o autorizado-->
+			<!--Cobran�a de pacote em quantidade incompat�vel com o procedimento/evolu��o cl�nica-->
+			<!--Itens de composi��o do pacote n�o realizados-->
+			<!--Cobran�a do pacote exige autoriza��o pr�via-->
+			<!--Cobran�a de pacote com hist�ria cl�nica/hip�tese diagn�stica n�o compat�vel-->
+			<!--Cobran�a de pacote em quantidade acima da m�xima permitida/autorizada-->
+			<!--Cobran�a de pacote n�o compat�vel com a idade. -->
+			<!--Cobran�a de pacote com aus�ncia de resultado ou laudo t�cnico. -->
+			<!--Pacote realizado pelo mesmo profissional, na mesma especialidade, no prazo inferior ao estipulado sem justificativa adequada. -->
+			<!--Pacote cobrado n�o corresponde ao exame executado-->
+			<!--Cobran�a de pacote ambulatorial com data de autoriza��o posterior � do atendimento. -->
+			<!--Outros-->
+			<!--Revis�o de glosa inv�lida-->
+			<!--Glosa mantida-->
+			<!--Pedido de revis�o sem justificativa-->
+			<!--Mais de um recurso de glosa para a mesma guia/protocolo-->
+			<!--A guia n�o � de revis�o-->
+			<!--N�mero da guia inv�lido-->
+			<!--Outros-->
+			<!--Procedimento odontol�gico inv�lido-->
+			<!--Cobran�a de procedimento odontol�gico que exige autoriza��o pr�via-->
+			<!--Idade do Benefici�rio incompat�vel com o Procedimento odontol�gico-->
+			<!--Cobran�a de procedimento odontol�gico em quantidade acima da m�xima permitida/autorizada-->
+			<!--Valor total do procedimento diferente do Valor Processado-->
+			<!--Quantidade de procedimento deve ser maior que zero-->
+			<!--Procedimentos odontol�gicos duplicados-->
+			<!--Cobran�a de procedimento odontol�gico incluso no procedimento principal-->
+			<!--Cobran�a de procedimento odontol�gico n�o executado-->
+			<!--Cobran�a de procedimento n�o solicitado pelo cirurgi�o-dentista-->
+			<!--Procedimento odontol�gico sem registro de execu��o-->
+			<!--Cobran�a de procedimento odontol�gico n�o correlacionado ao relat�rio espec�fico-->
+			<!--Cobran�a de procedimento odontol�gico sem justificativa para realiza��o ou com justificativa insuficiente. -->
+			<!--Cobran�a de procedimento odontol�gico com data de autoriza��o posterior � do atendimento. -->
+			<!--Cobran�a de procedimento odontol�gico com aus�ncia de resultado ou laudo t�cnico. -->
+			<!--Procedimento odontol�gico realizado pelo mesmo profissional, na mesma especialidade, no prazo inferior ao estipulado sem justificativa adequada. -->
+			<!--Procedimento cobrado n�o corresponde a per�cia (especificar). -->
+			<!--Evento glosado por auditoria (especificar) -->
+			<!--Evento sob an�lise t�cnica, aguardando libera��o de confirma��o para posterior pagamento-->
+			<!--Conforme documenta��o radiogr�fica enviada, evento realizado inadequadamente-->
+			<!--Falha em informa��o de dados de arcadas/hemi-arcos-->
+			<!--Falha em informa��o de dados de dente inicial e/ou final-->
+			<!--Falha em informa��o de dados de faces dos dentes-->
+			<!--Evento s� poss�vel em dentes dec�duos-->
+			<!--Evento s� poss�vel em dentes permanentes-->
+			<!--Erro nas informa��es de ordem dos dentes inicial e final-->
+			<!--Desacordo entre o tipo de dente e o n�mero de canais solicitados-->
+			<!--Evento restrito � especialistas-->
+			<!--Evento n�o indicado pela Auditoria Inicial-->
+			<!--Auditoria final consta que a restaura��o foi realizada em outro material-->
+			<!--RX fora dos padr�es t�cnicos-->
+			<!--Intervalo da �ltima MPP inferior a tr�s meses-->
+			<!--Intervalo da �ltima MPP inferior a quatro meses-->
+			<!--Justificativa tecnicamente n�o satisfat�ria-->
+			<!--Paciente em tratamento com o mesmo profissional-->
+			<!--Paciente em tratamento com outro profissional-->
+			<!--Procedimento cobrado n�o � igual ao executado-->
+			<!--RX inicial incongruente com o RX final-->
+			<!--RX n�o corresponde ao procedimento cobrado-->
+			<!--Glosa t�cnica (especificar detalhadamente) -->
+			<!--Outros-->
+			<!--Mensagem eletr�nica fora do padr�o TISS-->
+			<!--N�o foi poss�vel validar o arquivo XML-->
+			<!--Endere�o do Remetente inv�lido-->
+			<!--Endere�o do destinat�rio inv�lido-->
+			<!--Remetente n�o identificado-->
+			<!--Destinat�rio n�o identificado-->
+			<!--Mensagem inconsistente ou incompleta-->
+			<!--Espa�o reservado para a caixa de sa�da insuficiente-->
+			<!--Espa�o reservado para a caixa de entrada insuficiente-->
+			<!--Envio de mensagem n�o foi terminado-->
+			<!--Envio de mensagem finalizada-->
+			<!--Recebimento de mensagem n�o finalizado-->
+			<!--Recebimento de mensagem finalizada-->
+			<!--C�digo Hash inv�lido. Mensagem pode estar corrompida. -->
+			<!--N�mero de guias/demonstrativos dentro da mensagem superior ao tamanho m�ximo permitido.-->
+			<!--Erro n�o identificado-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+			<!--Mensagens customizaveis-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoGuia">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<!--Solicita��o-->
+			<!--Faturamento-->
+			<!--Re-apresenta��o-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoInternacao">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<enumeration value="4"/>
+			<enumeration value="5"/>
+			<!--Cl�nica-->
+			<!--Cir�rgica-->
+			<!--Obst�trica-->
+			<!--Pedi�trica-->
+			<!--Psiqui�trica-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoLogradouro">
+		<restriction base="string">
+			<enumeration value="001"/>
+			<enumeration value="002"/>
+			<enumeration value="004"/>
+			<enumeration value="005"/>
+			<enumeration value="007"/>
+			<enumeration value="008"/>
+			<enumeration value="009"/>
+			<enumeration value="010"/>
+			<enumeration value="011"/>
+			<enumeration value="012"/>
+			<enumeration value="013"/>
+			<enumeration value="014"/>
+			<enumeration value="015"/>
+			<enumeration value="016"/>
+			<enumeration value="017"/>
+			<enumeration value="019"/>
+			<enumeration value="020"/>
+			<enumeration value="021"/>
+			<enumeration value="022"/>
+			<enumeration value="023"/>
+			<enumeration value="024"/>
+			<enumeration value="027"/>
+			<enumeration value="028"/>
+			<enumeration value="030"/>
+			<enumeration value="031"/>
+			<enumeration value="032"/>
+			<enumeration value="033"/>
+			<enumeration value="036"/>
+			<enumeration value="037"/>
+			<enumeration value="038"/>
+			<enumeration value="039"/>
+			<enumeration value="040"/>
+			<enumeration value="043"/>
+			<enumeration value="045"/>
+			<enumeration value="046"/>
+			<enumeration value="050"/>
+			<enumeration value="052"/>
+			<enumeration value="053"/>
+			<enumeration value="054"/>
+			<enumeration value="055"/>
+			<enumeration value="056"/>
+			<enumeration value="059"/>
+			<enumeration value="060"/>
+			<enumeration value="062"/>
+			<enumeration value="063"/>
+			<enumeration value="064"/>
+			<enumeration value="065"/>
+			<enumeration value="067"/>
+			<enumeration value="070"/>
+			<enumeration value="071"/>
+			<enumeration value="072"/>
+			<enumeration value="073"/>
+			<enumeration value="074"/>
+			<enumeration value="076"/>
+			<enumeration value="077"/>
+			<enumeration value="079"/>
+			<enumeration value="081"/>
+			<enumeration value="082"/>
+			<enumeration value="087"/>
+			<enumeration value="088"/>
+			<enumeration value="089"/>
+			<enumeration value="090"/>
+			<enumeration value="091"/>
+			<enumeration value="092"/>
+			<enumeration value="094"/>
+			<enumeration value="095"/>
+			<enumeration value="096"/>
+			<enumeration value="097"/>
+			<enumeration value="098"/>
+			<enumeration value="099"/>
+			<enumeration value="100"/>
+			<enumeration value="101"/>
+			<enumeration value="103"/>
+			<enumeration value="104"/>
+			<enumeration value="105"/>
+			<enumeration value="106"/>
+			<enumeration value="108"/>
+			<enumeration value="452"/>
+			<enumeration value="453"/>
+			<enumeration value="465"/>
+			<enumeration value="468"/>
+			<enumeration value="469"/>
+			<enumeration value="470"/>
+			<enumeration value="471"/>
+			<enumeration value="472"/>
+			<enumeration value="473"/>
+			<enumeration value="474"/>
+			<enumeration value="475"/>
+			<enumeration value="476"/>
+			<enumeration value="477"/>
+			<enumeration value="478"/>
+			<enumeration value="479"/>
+			<enumeration value="480"/>
+			<enumeration value="481"/>
+			<enumeration value="482"/>
+			<enumeration value="483"/>
+			<enumeration value="484"/>
+			<enumeration value="485"/>
+			<enumeration value="486"/>
+			<enumeration value="487"/>
+			<enumeration value="495"/>
+			<enumeration value="496"/>
+			<enumeration value="497"/>
+			<enumeration value="498"/>
+			<enumeration value="499"/>
+			<enumeration value="500"/>
+			<enumeration value="501"/>
+			<enumeration value="502"/>
+			<enumeration value="503"/>
+			<enumeration value="504"/>
+			<enumeration value="505"/>
+			<enumeration value="506"/>
+			<enumeration value="507"/>
+			<enumeration value="508"/>
+			<enumeration value="509"/>
+			<enumeration value="510"/>
+			<enumeration value="511"/>
+			<enumeration value="512"/>
+			<enumeration value="513"/>
+			<enumeration value="514"/>
+			<enumeration value="515"/>
+			<enumeration value="516"/>
+			<enumeration value="517"/>
+			<enumeration value="518"/>
+			<enumeration value="519"/>
+			<enumeration value="520"/>
+			<enumeration value="521"/>
+			<enumeration value="522"/>
+			<enumeration value="523"/>
+			<enumeration value="524"/>
+			<enumeration value="525"/>
+			<enumeration value="526"/>
+			<enumeration value="527"/>
+			<enumeration value="528"/>
+			<enumeration value="529"/>
+			<enumeration value="530"/>
+			<enumeration value="531"/>
+			<enumeration value="532"/>
+			<enumeration value="533"/>
+			<enumeration value="534"/>
+			<enumeration value="535"/>
+			<enumeration value="536"/>
+			<enumeration value="537"/>
+			<enumeration value="538"/>
+			<enumeration value="539"/>
+			<enumeration value="540"/>
+			<enumeration value="541"/>
+			<enumeration value="542"/>
+			<enumeration value="543"/>
+			<enumeration value="544"/>
+			<enumeration value="545"/>
+			<enumeration value="546"/>
+			<enumeration value="547"/>
+			<enumeration value="548"/>
+			<enumeration value="549"/>
+			<enumeration value="550"/>
+			<enumeration value="551"/>
+			<enumeration value="552"/>
+			<enumeration value="553"/>
+			<enumeration value="554"/>
+			<enumeration value="555"/>
+			<enumeration value="556"/>
+			<enumeration value="557"/>
+			<enumeration value="558"/>
+			<enumeration value="559"/>
+			<enumeration value="560"/>
+			<enumeration value="561"/>
+			<enumeration value="562"/>
+			<enumeration value="563"/>
+			<enumeration value="564"/>
+			<enumeration value="565"/>
+			<enumeration value="566"/>
+			<enumeration value="567"/>
+			<enumeration value="568"/>
+			<enumeration value="569"/>
+			<enumeration value="570"/>
+			<enumeration value="571"/>
+			<enumeration value="572"/>
+			<enumeration value="573"/>
+			<enumeration value="645"/>
+			<enumeration value="646"/>
+			<enumeration value="650"/>
+			<enumeration value="651"/>
+			<enumeration value="652"/>
+			<enumeration value="653"/>
+			<enumeration value="654"/>
+			<!--Acesso-->
+			<!--Adro-->
+			<!--Alameda-->
+			<!--Alto-->
+			<!--Atalho-->
+			<!--Avenida-->
+			<!--Balne�rio-->
+			<!--Belvedere-->
+			<!--Beco-->
+			<!--Bloco-->
+			<!--Bosque-->
+			<!--Boulevard-->
+			<!--Baixa-->
+			<!--Cais-->
+			<!--Caminho-->
+			<!--Chapad�o-->
+			<!--Conjunto-->
+			<!--Col�nia-->
+			<!--Corredor-->
+			<!--Campo-->
+			<!--C�rrego-->
+			<!--Desvio-->
+			<!--Distrito-->
+			<!--Escada-->
+			<!--Estrada-->
+			<!--Esta��o-->
+			<!--Est�dio-->
+			<!--Favela-->
+			<!--Fazenda-->
+			<!--Ferrovia-->
+			<!--Fonte-->
+			<!--Feira-->
+			<!--Forte-->
+			<!--Galeria-->
+			<!--Granja-->
+			<!--Ilha-->
+			<!--Jardim-->
+			<!--Ladeira-->
+			<!--Largo-->
+			<!--Lagoa-->
+			<!--Loteamento-->
+			<!--Morro-->
+			<!--Monte-->
+			<!--Paralela-->
+			<!--Passeio-->
+			<!--P�tio-->
+			<!--Pra�a-->
+			<!--Parada-->
+			<!--Praia-->
+			<!--Prolongamento-->
+			<!--Parque-->
+			<!--Passarela-->
+			<!--Passagem-->
+			<!--Ponte-->
+			<!--Quadra-->
+			<!--Quinta-->
+			<!--Rua-->
+			<!--Ramal-->
+			<!--Recanto-->
+			<!--Retiro-->
+			<!--Reta-->
+			<!--Rodovia-->
+			<!--Retorno-->
+			<!--S�tio-->
+			<!--Servid�o-->
+			<!--Setor-->
+			<!--Subida-->
+			<!--Trincheira-->
+			<!--Terminal-->
+			<!--Trevo-->
+			<!--Travessa-->
+			<!--Via-->
+			<!--Viaduto-->
+			<!--Vila-->
+			<!--Viela-->
+			<!--Vale-->
+			<!--Zigue-zague-->
+			<!--Trecho-->
+			<!--Vereda-->
+			<!--Art�ria-->
+			<!--Elevada-->
+			<!--Porto-->
+			<!--Bal�o-->
+			<!--Paradouro-->
+			<!--�rea-->
+			<!--Jardinete-->
+			<!--Esplanada-->
+			<!--Quintas-->
+			<!--Rotula-->
+			<!--Marina-->
+			<!--Descida-->
+			<!--Circular-->
+			<!--Unidade-->
+			<!--Ch�cara-->
+			<!--Rampa-->
+			<!--Ponta-->
+			<!--Via de pedestre-->
+			<!--Condom�nio-->
+			<!--Habitacional-->
+			<!--Residencial-->
+			<!--Canal-->
+			<!--Buraco-->
+			<!--M�dulo-->
+			<!--Est�ncia-->
+			<!--Lago-->
+			<!--N�cleo-->
+			<!--Aeroporto-->
+			<!--Passagem Subterr�nea-->
+			<!--Complexo Vi�rio-->
+			<!--Pra�a de Esportes-->
+			<!--Via Elevada-->
+			<!--Rotat�ria-->
+			<!--1� Travessa-->
+			<!--2� Travessa-->
+			<!--3� Travessa-->
+			<!--4� Travessa-->
+			<!--5� Travessa-->
+			<!--6� Travessa-->
+			<!--7� Travessa-->
+			<!--8� Travessa-->
+			<!--9� Travessa-->
+			<!--10� Travessa-->
+			<!--11� Travessa-->
+			<!--12� Travessa-->
+			<!--13� Travessa-->
+			<!--14� Travessa-->
+			<!--15� Travessa-->
+			<!--16� Travessa-->
+			<!--1� Alto-->
+			<!--2� Alto-->
+			<!--3� Alto-->
+			<!--4� Alto-->
+			<!--5� Alto-->
+			<!--1� Beco-->
+			<!--2� Beco-->
+			<!--3� Beco-->
+			<!--4� Beco-->
+			<!--5� Beco-->
+			<!--1� Paralela-->
+			<!--2� Paralela-->
+			<!--3� Paralela-->
+			<!--4� Paralela-->
+			<!--5� Paralela-->
+			<!--1� Subida-->
+			<!--2� Subida-->
+			<!--3� Subida-->
+			<!--4� Subida-->
+			<!--5� Subida-->
+			<!--6� Subida-->
+			<!--1� Vila-->
+			<!--2� Vila-->
+			<!--3� Vila-->
+			<!--4� Vila-->
+			<!--5� Vila-->
+			<!--1� Parque-->
+			<!--2� Parque-->
+			<!--3� Parque-->
+			<!--1� Rua-->
+			<!--2� Rua-->
+			<!--3� Rua-->
+			<!--4� Rua-->
+			<!--5� Rua-->
+			<!--6� Rua-->
+			<!--7� Rua-->
+			<!--8� Rua-->
+			<!--9� Rua-->
+			<!--10� Rua-->
+			<!--11� Rua-->
+			<!--12� Rua-->
+			<!--Estacionamento-->
+			<!--Vala-->
+			<!--Rua de Pedestre-->
+			<!--T�nel-->
+			<!--Variante-->
+			<!--Rodo Anel-->
+			<!--Travessa Particular-->
+			<!--Cal�ada -->
+			<!--Via de Acesso-->
+			<!--Entrada Particular-->
+			<!--Acampamento-->
+			<!--Via Expressa-->
+			<!--Estrada Municipal-->
+			<!--Avenida Contorno-->
+			<!--Entre-quadra-->
+			<!--Rua de Liga��o-->
+			<!--�rea Especial-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoSaidaGuiaConsulta">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<enumeration value="4"/>
+			<enumeration value="5"/>
+			<!--Retorno-->
+			<!--Retorno SADT-->
+			<!--Refer�ncia-->
+			<!--Interna��o-->
+			<!--Alta-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoSaidaGuiaSADT">
+		<restriction base="string">
+			<enumeration value="1"/>
+			<enumeration value="2"/>
+			<enumeration value="3"/>
+			<enumeration value="4"/>
+			<enumeration value="5"/>
+			<enumeration value="6"/>
+			<!--Retorno-->
+			<!--Retorno SADT-->
+			<!--Refer�ncia-->
+			<!--Interna��o-->
+			<!--Alta-->
+			<!--�bito-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_tipoTransacao">
+		<restriction base="string">
+			<enumeration value="ENVIO_LOTE_GUIAS"/>
+			<enumeration value="SOLIC_DEMONSTRATIVO_RETORNO"/>
+			<enumeration value="SOLIC_STATUS_PROTOCOLO"/>
+			<enumeration value="SOLICITACAO_PROCEDIMENTOS"/>
+			<enumeration value="PROTOCOLO_RECEBIMENTO"/>
+			<enumeration value="SITUACAO_PROTOCOLO"/>
+			<enumeration value="RESPOSTA_SOLICITACAO"/>
+			<enumeration value="DEMONSTRATIVO_PAGAMENTO"/>
+			<enumeration value="DEMONSTRATIVO_ANALISE_CONTA"/>
+			<enumeration value="DEMONSTRATIVO_ODONTOLOGIA"/>
+			<enumeration value="CANCELAMENTO_GUIA_RECIBO"/>
+			<enumeration value="RE_APRESENTACAO_GUIA"/>
+			<enumeration value="CANCELA_GUIA"/>
+			<enumeration value="VERIFICA_ELEGIBILIDADE"/>
+			<enumeration value="SITUACAO_ELEGIBILIDADE"/>
+			<enumeration value="AUTORIZACAO_ODONTOLOGIA"/>
+			<enumeration value="SOLICITA_STATUS_AUTORIZACAO"/>
+			<enumeration value="STATUS_AUTORIZACAO"/>
+			<enumeration value="ENVIO_ANEXO"/>
+			<enumeration value="PROTOCOLO_RECEBIMENTO_ANEXO"/>
+			<enumeration value="COMUNICACAO_BENEFICIARIO"/>
+			<enumeration value="RECIBO_COMUNICACAO"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_UF">
+		<restriction base="string">
+			<length value="2"/>
+			<enumeration value="RS"/>
+			<enumeration value="SC"/>
+			<enumeration value="PR"/>
+			<enumeration value="SP"/>
+			<enumeration value="MG"/>
+			<enumeration value="RJ"/>
+			<enumeration value="ES"/>
+			<enumeration value="MS"/>
+			<enumeration value="MT"/>
+			<enumeration value="GO"/>
+			<enumeration value="TO"/>
+			<enumeration value="PA"/>
+			<enumeration value="AM"/>
+			<enumeration value="RO"/>
+			<enumeration value="RR"/>
+			<enumeration value="AC"/>
+			<enumeration value="DF"/>
+			<enumeration value="BA"/>
+			<enumeration value="SE"/>
+			<enumeration value="CE"/>
+			<enumeration value="PI"/>
+			<enumeration value="PB"/>
+			<enumeration value="RN"/>
+			<enumeration value="AL"/>
+			<enumeration value="MA"/>
+			<enumeration value="PE"/>
+			<enumeration value="AP"/>
+			<!--Rio Grande do Sul-->
+			<!--Santa Catarina-->
+			<!--Paran�-->
+			<!--S�o Paulo-->
+			<!--Minas Gerais-->
+			<!--Rio de Janeiro-->
+			<!--Esp�rito Santo-->
+			<!--Mato Grosso do Sul-->
+			<!--Mato Grosso-->
+			<!--Goi�s-->
+			<!--Tocantins-->
+			<!--Par�-->
+			<!--Amazonas-->
+			<!--Rond�nia-->
+			<!--Roraima-->
+			<!--Acre-->
+			<!--Distrito Federal-->
+			<!--Bahia-->
+			<!--Sergipe-->
+			<!--Cear�-->
+			<!--Piau�-->
+			<!--Para�ba-->
+			<!--Rio Grande do Norte-->
+			<!--Alagoas-->
+			<!--Maranh�o-->
+			<!--Pernambuco-->
+			<!--Amap�-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_unidadeTempo">
+		<restriction base="string">
+			<length value="1"/>
+			<enumeration value="A"/>
+			<enumeration value="M"/>
+			<enumeration value="D"/>
+			<!--Anos-->
+			<!--Meses-->
+			<!--Dias-->
+		</restriction>
+	</simpleType>
+	<simpleType name="st_valorMonetario">
+		<restriction base="decimal">
+			<fractionDigits value="2"/>
+			<totalDigits value="10"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_versao">
+		<restriction base="string">
+			<enumeration value="2.02.01"/>
+			<enumeration value="2.02.02"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="st_viaDeAcesso">
+		<restriction base="string">
+			<maxLength value="1"/>
+			<enumeration value="U"/>
+			<enumeration value="M"/>
+			<enumeration value="D"/>
+			<!--�nica-->
+			<!--Mesma via-->
+			<!--Diferentes vias-->
+		</restriction>
+	</simpleType>
+</schema>
